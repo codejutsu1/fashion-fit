@@ -18,3 +18,17 @@
 .text-outfit {
   color: rgba(20, 20, 21, 1);
 }
+
+.best-sellers{
+  background: rgba(253, 251, 249, 1);
+}
+
+.best-sellers-div {
+  background: rgba(10, 59, 90, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.best-seller-grid {
+  border: 1px solid rgba(241, 224, 210, 1);
+  border-top: 0;
+}
