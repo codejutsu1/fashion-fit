@@ -1,3 +1,3 @@
-"# fashion-fit" 
+# Fashion Fit 
 
-An Ecommerce website design with Tailwind and Vite.
+An Ecommerce website designed with Tailwind and Vite.
