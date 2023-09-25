@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.text {
+  color: rgba(20, 20, 21, 0.75);
+}
