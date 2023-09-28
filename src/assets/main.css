@@ -1,35 +1,42 @@
-@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+* {
+  font-family: 'Nunito', sans-serif;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+.text {
+  color: rgba(20, 20, 21, 0.75);
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.wish-icon {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 4px 8px 0px rgba(47, 73, 84, 0.12);
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.text-outfit {
+  color: rgba(20, 20, 21, 1);
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.best-sellers{
+  background: rgba(253, 251, 249, 1);
+}
+
+.best-sellers-div {
+  background: rgba(10, 59, 90, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.best-seller-grid {
+  border: 1px solid rgba(241, 224, 210, 1);
+  border-top: 0;
+}
+
+.quotes {
+  box-shadow: 0px 2px 4px 0px #DDD3D340;
+}
+
+.landing {
+  box-shadow: 0px 0px 10px 0px #ABABABA3;
 }
