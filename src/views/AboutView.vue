@@ -34,6 +34,60 @@
         </div>
       </div>
     </section>
+
+    <section class="bg-[#F7EDE5] text-[#141415] py-14">
+      <div>
+        <h1 class="text-center text-4xl font-semibold">Our Values</h1>
+        <p class="text-center text-2xl py-2">What do we cherish?</p>
+        <div class="w-[60%] mx-auto py-10">
+          <div class="flex justify-between">
+            <div class="flex justify-between border w-1/2">
+              <div class="w-4/5 flex items-start">
+                <img src="/images/icons/high-quality.svg" alt="High Quality">
+              </div>
+              <div class="text-[#141415] py-1">
+                <h1 class="font-semibold text-xl">
+                  High Quality
+                </h1>
+                <span>
+                  We are committed to creating high-quality garments using skilled craftsmanship and attention to detail. We use premium materials, and expert tailoring.
+                </span>
+              </div>
+            </div>
+
+            <div class="flex justify-between w-2/5">
+              <div class="w-2/5 flex items-start">
+                <img src="/images/icons/user-first.svg" alt="User Quality">
+              </div>
+              <div class="w-4/5 text-[#141415] py-1">
+                <h1 class="font-semibold text-xl">
+                  User Quality
+                </h1>
+                <span class="block">
+                  We are committed to putting our customer's needs first. We believe in establishing a good relation with our customers.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-1/2 mx-auto">
+            <div class="flex justify-between">
+              <div class="w-4/5 flex items-start">
+                <img src="/images/icons/user-first.svg" alt="User Quality">
+              </div>
+              <div class="text-[#141415] py-1">
+                <h1 class="font-semibold text-xl">
+                  User Quality
+                </h1>
+                <span>
+                  We are committed to putting our customer's needs first. We believe in establishing a good relation with our customers.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
