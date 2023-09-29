@@ -1,45 +1,8 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fashion Fit</title>
-  </head>
-  <body>
-    <header class="w-5/6 mx-auto flex items-center justify-between py-10">
-      <div>
-        <img src="/images/logo/logo.svg" alt="Fashion Fit Logo">
-      </div>
-      <nav>
-        <ul class="flex space-x-16 font-bold text-base text">
-          <li>
-            <a href="#" class="text-[#307098]">Home</a>
-          </li>
-          <li>
-            <a href="#">About us</a>
-          </li>
-          <li>
-            <a href="#">Collections</a>
-          </li>
-          <li>
-            <a href="#">Contact us</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="flex space-x-5">
-        <img class="w-full h-full object-fit" class="cursor-pointer" src="/images/icons/search.svg" alt="Search Icon">
-        <img class="w-full h-full object-fit" class="cursor-pointer" src="/images/icons/person.svg" alt="Person Icon">
-        <img class="w-full h-full object-fit" class="cursor-pointer" src="/images/icons/cart.svg" alt="Cart Icon">
-        <img class="w-full h-full object-fit" class="cursor-pointer" src="/images/icons/wishlist.svg" alt="Wishlist Icon">
-      </div>
-    </header>
+<script setup>
 
-    
+</script>
 
+<template>
     <footer class="bg-[#F3E5D9]">
       <div>
         <div class="w-5/6 mx-auto flex justify-between py-10">
@@ -118,6 +81,4 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="/main.js"></script>
-  </body>
-</html>
+</template>

@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage : {
+        'about' : "url('/images/pictures/about-us.jpg')"
+      },
       fontFamily : {
         'nunito' : ['nunito', 'sans-serif']
       },
