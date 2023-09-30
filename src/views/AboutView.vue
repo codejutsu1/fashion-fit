@@ -1,3 +1,7 @@
+<script setup>
+import Reviews from '../components/Reviews.vue'
+
+</script>
 <template>
   <main class="overflow-hidden">
     <section class="bg-about bg-cover py-14">
@@ -39,13 +43,13 @@
       <div>
         <h1 class="text-center text-4xl font-semibold">Our Values</h1>
         <p class="text-center text-2xl py-2">What do we cherish?</p>
-        <div class="w-[60%] mx-auto py-10">
-          <div class="flex justify-between">
-            <div class="flex justify-between border w-1/2">
-              <div class="w-4/5 flex items-start">
+        <div class="w-3/5 mx-auto pt-10">
+          <div class="grid grid-cols-2 justify-between">
+            <div class="flex justify-between">
+              <div class="w-4/5 justify-end flex items-start">
                 <img src="/images/icons/high-quality.svg" alt="High Quality">
               </div>
-              <div class="text-[#141415] py-1">
+              <div class="text-[#141415] py-1 pl-2">
                 <h1 class="font-semibold text-xl">
                   High Quality
                 </h1>
@@ -55,11 +59,11 @@
               </div>
             </div>
 
-            <div class="flex justify-between w-2/5">
-              <div class="w-2/5 flex items-start">
+            <div class="flex justify-between">
+              <div class="w-full flex items-start justify-end">
                 <img src="/images/icons/user-first.svg" alt="User Quality">
               </div>
-              <div class="w-4/5 text-[#141415] py-1">
+              <div class="text-[#141415] py-1 pl-2">
                 <h1 class="font-semibold text-xl">
                   User Quality
                 </h1>
@@ -70,17 +74,17 @@
             </div>
           </div>
 
-          <div class="w-1/2 mx-auto">
-            <div class="flex justify-between">
-              <div class="w-4/5 flex items-start">
-                <img src="/images/icons/user-first.svg" alt="User Quality">
+          <div class="w-1/2 mx-auto pt-10">
+            <div class="flex justify-between border">
+              <div class="w-full flex items-start justify-end">
+                <img src="/images/icons/diversity.svg" alt="User Quality">
               </div>
-              <div class="text-[#141415] py-1">
+              <div class="text-[#141415] py-1 pl-2">
                 <h1 class="font-semibold text-xl">
-                  User Quality
+                  Inclusivity and Diversity
                 </h1>
                 <span>
-                  We are committed to putting our customer's needs first. We believe in establishing a good relation with our customers.
+                  Our designs are thoughtfully created to celebrate the beauty in every shade, shape, and size. We help everyone find their taste in our collections.
                 </span>
               </div>
             </div>
@@ -88,6 +92,8 @@
         </div>
       </div>
     </section>
+
+    <Reviews />
   </main>
 </template>
 
