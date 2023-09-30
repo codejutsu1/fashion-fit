@@ -75,7 +75,7 @@ import Reviews from '../components/Reviews.vue'
           </div>
 
           <div class="w-1/2 mx-auto pt-10">
-            <div class="flex justify-between border">
+            <div class="flex justify-between">
               <div class="w-full flex items-start justify-end">
                 <img src="/images/icons/diversity.svg" alt="User Quality">
               </div>
@@ -94,6 +94,19 @@ import Reviews from '../components/Reviews.vue'
     </section>
 
     <Reviews />
+
+    <section class="bg-[#F9F3EE] py-14">
+      <div class="text-center w-1/2 mx-auto text-[#141415]">
+        <h1 class="text-4xl font-semibold leading-[50px]">Newsletter</h1>
+        <p class="text-2xl  pb-8">Let’s deliver fashion goodness into your inbox</p>
+        <input type="email" class="block w-[75%] mx-auto bg-[#FFFFFF] placeholder:text-[#285F81] text-[#285F81] placeholder:text-xs py-5 px-4" placeholder="Enter your email address">
+        <button class="bg-[#307098] py-3 px-9 mt-5 font-bold leading-5 text-[#FFFFFF]">
+            Subscribe
+        </button>
+      </div>
+    </section>
+
+
   </main>
 </template>
 
