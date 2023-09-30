@@ -11,16 +11,16 @@
             <nav>
             <ul class="flex space-x-16 font-bold text-base text">
                 <li>
-                <RouterLink class="text-[#307098]" to="/">Home</RouterLink>
+                    <RouterLink class="text-[#307098]" to="/">Home</RouterLink>
                 </li>
                 <li>
-                <RouterLink to="/about">About us</RouterLink>
+                    <RouterLink to="/about">About us</RouterLink>
                 </li>
                 <li>
-                <a href="#">Collections</a>
+                    <a href="#">Collections</a>
                 </li>
                 <li>
-                <a href="#">Contact us</a>
+                    <RouterLink to="/contact-us">Contact us</RouterLink>
                 </li>
             </ul>
             </nav>
