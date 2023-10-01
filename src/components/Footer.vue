@@ -5,18 +5,21 @@
 <template>
     <footer class="bg-[#F3E5D9]">
       <div>
-        <div class="w-5/6 mx-auto lg:flex justify-between space-y-3 lg:space-y-0 py-10">
-          <div class="space-y-4">
+        <div class="lg:w-5/6 mx-auto lg:flex justify-between space-y-3 lg:space-y-0 py-10">
+          <div class="px-4 lg:px-0 space-y-4">
             <img src="/images/logo/logo.svg" alt="Logo">
-            <div class="w-full py-3 px-4 border border-[#141415] bg-transparent flex gap-2">
+            <div class="inline-block lg:w-full py-3 px-4 border border-[#141415] bg-transparent lg:flex space-x-2">
               <span class="font-medium text-[#0A3B5A]">English</span>
-              <img src="/images/icons/dropdown.svg" alt="Dropdown">
+              <img class="inline-block" src="/images/icons/dropdown.svg" alt="Dropdown">
             </div>
           </div>
 
           <div class="text-[#141415]">
-            <h1 class="font-semibold text-base lg:text-xl">About</h1>
-            <ul class="py-4 space-y-2 text-xs lg:text-base">
+            <div class="border-b border-[#141415] lg:border-0 w-full lg:py-0 py-3 pt-10 lg:pt-0 flex justify-between px-4 lg:px-0">
+              <h1 class="font-semibold text-base lg:text-xl">About</h1>
+              <img class="lg:hidden" src="/images/icons/dropdown-2.svg" alt="Dropdown">
+            </div>
+            <ul class="py-4 space-y-2 text-xs lg:text-base hidden lg:block">
               <li>
                 <a href="#">Our Story</a>
               </li>
@@ -36,8 +39,11 @@
           </div>
 
           <div class="text-[#141415]">
-            <h1 class="font-semibold text-base lg:text-xl">Product</h1>
-            <ul class="py-4 space-y-2 text-xs lg:text-base">
+            <div class="border-b border-[#141415] lg:border-0 w-full lg:py-0 py-3 flex justify-between px-4 lg:px-0">
+              <h1 class="font-semibold text-base lg:text-xl">Product</h1>
+              <img class="lg:hidden" src="/images/icons/dropdown-2.svg" alt="Dropdown">
+            </div>
+            <ul class="py-4 space-y-2 text-xs lg:text-base hidden lg:block">
               <li>
                 <a href="#">Men</a>
               </li>
@@ -53,7 +59,7 @@
             </ul>
           </div>
 
-          <div class="text-[#141415]">
+          <div class="text-[#141415] px-4 lg:px-0 pt-10 lg:pt-0">
             <h1 class="font-semibold text-base lg:text-xl">Connect with us</h1>
             <ul class="flex space-x-5 py-5">
               <li>
