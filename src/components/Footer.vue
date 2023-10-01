@@ -5,7 +5,7 @@
 <template>
     <footer class="bg-[#F3E5D9]">
       <div>
-        <div class="w-5/6 mx-auto flex justify-between py-10">
+        <div class="w-5/6 mx-auto lg:flex justify-between space-y-3 lg:space-y-0 py-10">
           <div class="space-y-4">
             <img src="/images/logo/logo.svg" alt="Logo">
             <div class="w-full py-3 px-4 border border-[#141415] bg-transparent flex gap-2">
@@ -15,8 +15,8 @@
           </div>
 
           <div class="text-[#141415]">
-            <h1 class="font-semibold text-xl">About</h1>
-            <ul class="py-4 space-y-2 text-base">
+            <h1 class="font-semibold text-base lg:text-xl">About</h1>
+            <ul class="py-4 space-y-2 text-xs lg:text-base">
               <li>
                 <a href="#">Our Story</a>
               </li>
@@ -36,8 +36,8 @@
           </div>
 
           <div class="text-[#141415]">
-            <h1 class="font-semibold text-xl">Product</h1>
-            <ul class="py-4 space-y-2 text-base">
+            <h1 class="font-semibold text-base lg:text-xl">Product</h1>
+            <ul class="py-4 space-y-2 text-xs lg:text-base">
               <li>
                 <a href="#">Men</a>
               </li>
@@ -54,7 +54,7 @@
           </div>
 
           <div class="text-[#141415]">
-            <h1 class="font-semibold text-xl">Connect with us</h1>
+            <h1 class="font-semibold text-base lg:text-xl">Connect with us</h1>
             <ul class="flex space-x-5 py-5">
               <li>
                 <a href="#">
