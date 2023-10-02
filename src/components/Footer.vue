@@ -1,4 +1,15 @@
 <script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router';
+
+const aboutDropdown = ref(false)
+const productDropdown = ref(false)
+
+const router = useRouter()
+
+router.beforeEach(() => {
+    aboutDropdown.value = productDropdown.value = false
+})
 
 </script>
 
@@ -15,11 +26,17 @@
           </div>
 
           <div class="text-[#141415]">
-            <div class="border-b border-[#141415] lg:border-0 w-full lg:py-0 py-3 pt-10 lg:pt-0 flex justify-between px-4 lg:px-0">
+            <div
+              @click="aboutDropdown = !aboutDropdown" 
+              class="border-b border-[#141415] lg:border-0 w-full lg:py-0 py-3 pt-10 lg:pt-0 flex justify-between px-4 lg:px-0"
+            >
               <h1 class="font-semibold text-base lg:text-xl">About</h1>
               <img class="lg:hidden" src="/images/icons/dropdown-2.svg" alt="Dropdown">
             </div>
-            <ul class="py-4 space-y-2 text-xs lg:text-base hidden lg:block">
+            <ul 
+              :class="{'block' : aboutDropdown, 'hidden' : !aboutDropdown}"
+              class="py-4 px-4 lg:px-0 space-y-2 text-xs lg:text-base lg:block"
+            >
               <li>
                 <a href="#">Our Story</a>
               </li>
@@ -39,11 +56,14 @@
           </div>
 
           <div class="text-[#141415]">
-            <div class="border-b border-[#141415] lg:border-0 w-full lg:py-0 py-3 flex justify-between px-4 lg:px-0">
+            <div @click="productDropdown = !productDropdown" 
+                  :class="{'border-0' : productDropdown, 'border-b' : !productDropdown}"
+                   class="border-[#141415] lg:border-0 w-full lg:py-0 py-3 flex justify-between px-4 lg:px-0"
+            >
               <h1 class="font-semibold text-base lg:text-xl">Product</h1>
               <img class="lg:hidden" src="/images/icons/dropdown-2.svg" alt="Dropdown">
             </div>
-            <ul class="py-4 space-y-2 text-xs lg:text-base hidden lg:block">
+            <ul class="py-4 px-4 lg:px-0 space-y-2 text-xs lg:text-base lg:block" :class="{'block' : productDropdown, 'hidden' : !productDropdown}">
               <li>
                 <a href="#">Men</a>
               </li>

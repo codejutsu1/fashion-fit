@@ -1,6 +1,6 @@
 <script setup>
-import { ref, watch } from 'vue'
-import { createRouter, onBeforeRouteLeave, useRoute, useRouter } from 'vue-router';
+import { ref } from 'vue'
+import { useRouter } from 'vue-router';
 
 const isOpen = ref(false);
 
