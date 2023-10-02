@@ -1,17 +1,14 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, watch } from 'vue'
+import { createRouter, onBeforeRouteLeave, useRoute, useRouter } from 'vue-router';
 
 const isOpen = ref(false);
 
-function openBar()
-{
-    isOpen.value = true
-}
+const router = useRouter()
 
-function closeBar()
-{
+router.beforeEach(() => {
     isOpen.value = false
-}
+})
 
 </script>
 
@@ -43,20 +40,20 @@ function closeBar()
                 <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/cart.svg" alt="Cart Icon">
                 <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/wishlist.svg" alt="Wishlist Icon">
             </div>
-            <div @click="openBar" class="lg:hidden">
+            <div @click="isOpen = !isOpen" class="lg:hidden">
                 <img src="/images/icons/menu.svg" alt="Menu Bar">
             </div>
             
             <!-- Responsive mobile -->
-            <div class="w-full bg-[#FFFFFF] inset-x-0 top-0 z-40 pb-8" :class="{'hidden': !isOpen, 'fixed' : isOpen}">
+            <div class="fixed w-full bg-[#FFFFFF] inset-x-0 top-0 z-40 pb-8" v-if="isOpen">
                 <div class="flex justify-between pt-8 px-4">
                     <div class="border flex space-x-3 w-4/5 px-4">
                         <img class="w-4" src="/images/icons/search-black.svg" alt="Search Icon">
-                        <div class="h-10 w-full">
+                        <div class="-full h-full">
                             <input type="text" class="h-full w-full focus:outline-none placeholder:text-xs placeholder:font-medium placeholder:text-[#141415]" placeholder="Search">
                         </div>
                     </div>
-                    <div @click="closeBar" class="flex items-center p-4">
+                    <div @click="isOpen = !isOpen" class="flex items-center p-4">
                         <img class="w-4" src="/images/icons/close.svg" alt="Close SVG">
                     </div>
                 </div>
