@@ -1,20 +1,29 @@
 <script setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router';
 
 const isOpen = ref(false);
+const collectionOpen = ref(false)
+const collection = ref(null)
 
 const router = useRouter()
 
 router.beforeEach(() => {
     isOpen.value = false
+    collectionOpen.value = false
+})
+
+onMounted(()=> {
+    document.addEventListener("click", (e)=>{
+        if(e.target != collection.value ) return console.log('Hello')
+    })
 })
 
 </script>
 
 <template>
     <header class="w-full">
-        <div class="w-5/6 mx-auto flex items-center justify-between py-8">
+        <div class="relative w-5/6 mx-auto flex items-center justify-between py-8">
             <div >
                 <img src="/images/logo/logo.svg" alt="Fashion Fit Logo">
             </div>
@@ -27,7 +36,7 @@ router.beforeEach(() => {
                         <RouterLink to="/about">About us</RouterLink>
                     </li>
                     <li>
-                        <a href="#">Collections</a>
+                        <button @click="collectionOpen = !collectionOpen">Collections</button>
                     </li>
                     <li>
                         <RouterLink to="/contact-us">Contact us</RouterLink>
@@ -86,6 +95,119 @@ router.beforeEach(() => {
                     <div class="flex items-center space-x-2">
                         <img class="w-7 h-7" src="/images/icons/cart.svg" alt="Cart">
                         <span>My Cart</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collection Menu -->
+            <div class="absolute w-full bg-[#FFFFFF] -bottom-80" :class="{'hidden' : !collectionOpen, 'block': collectionOpen}" ref="collection">
+                <div class="flex justify-between mx-auto py-10 px-28">
+                    <div>
+                        <h1 class="text-[#141415] text-xl font-semibold">Shop</h1>
+                        <ul class="py-5 space-y-2">
+                            <li>
+                                <a href="#">
+                                    All Products
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Men
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Women
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    New Collection
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Top Sellers
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Sales
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h1 class="text-[#141415] text-xl font-semibold">Categories</h1>
+                        <ul class="py-5 space-y-2">
+                            <li>
+                                <a href="#">
+                                    Playsuits
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Men's suit
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Dresses
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Skirts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Shorts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Beach Wear
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h1 class="text-[#141415] text-xl font-semibold">Accessories</h1>
+                        <ul class="py-5 space-y-2">
+                            <li>
+                                <a href="#">
+                                    Bags
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Jewelries
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Shoes
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Watches
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Sunglasses
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Belts
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
