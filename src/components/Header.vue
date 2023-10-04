@@ -4,7 +4,7 @@ import { useRouter } from 'vue-router';
 
 const isOpen = ref(false);
 const collectionOpen = ref(false)
-const collection = ref(null)
+const body = document.querySelector("body"); 
 
 const router = useRouter()
 
@@ -13,11 +13,16 @@ router.beforeEach(() => {
     collectionOpen.value = false
 })
 
-onMounted(()=> {
-    document.addEventListener("click", (e)=>{
-        if(e.target != collection.value ) return console.log('Hello')
-    })
-})
+function collection(){
+    collectionOpen.value = !collectionOpen.value
+    return collectionOpen.value ? body.style.overflow = 'hidden' : body.style.overflow = 'auto'
+}
+
+
+function removeCollection() {
+    body.style.overflow = 'auto'
+    collectionOpen.value = false
+}
 
 </script>
 
@@ -28,7 +33,7 @@ onMounted(()=> {
                 <img src="/images/logo/logo.svg" alt="Fashion Fit Logo">
             </div>
             <nav>
-                <ul class="hidden lg:flex space-x-16 font-bold text-base text">
+                <ul class="hidden lg:flex space-x-16 font-bold text-base text relative z-50">
                     <li>
                         <RouterLink class="text-[#307098]" to="/">Home</RouterLink>
                     </li>
@@ -36,7 +41,7 @@ onMounted(()=> {
                         <RouterLink to="/about">About us</RouterLink>
                     </li>
                     <li>
-                        <button @click="collectionOpen = !collectionOpen">Collections</button>
+                        <button @click="collection">Collections</button>
                     </li>
                     <li>
                         <RouterLink to="/contact-us">Contact us</RouterLink>
@@ -100,7 +105,7 @@ onMounted(()=> {
             </div>
 
             <!-- Collection Menu -->
-            <div class="absolute w-full bg-[#FFFFFF] -bottom-80" :class="{'hidden' : !collectionOpen, 'block': collectionOpen}" ref="collection">
+            <div class="absolute w-full bg-[#FFFFFF] -bottom-80 z-50" :class="{'hidden' : !collectionOpen, 'block': collectionOpen}">
                 <div class="flex justify-between mx-auto py-10 px-28">
                     <div>
                         <h1 class="text-[#141415] text-xl font-semibold">Shop</h1>
@@ -212,5 +217,7 @@ onMounted(()=> {
                 </div>
             </div>
         </div>
+
+        <div @click="removeCollection" class="inset-y-0 inset-x-0 z-40" :class="{'hidden' : !collectionOpen, 'fixed': collectionOpen}"></div>
     </header>
 </template>
