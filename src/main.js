@@ -11,15 +11,21 @@ app.use(router)
 app.mount('#app')
 
 document.addEventListener( 'DOMContentLoaded', function () {
-    new Splide( '.splide', {
-        "breakpoints" : {
+    new Splide('.splide1', {
+        breakpoints : {
             640 : {
-                perPage: 2,
+                perPage: 1,
                 width: '100%',        
             },
-            480: {
-                perPage: 1
-            }
+        }
+    } ).mount();
+
+    new Splide('.splide2', {
+        mediaQuery: 'min',
+        breakpoints: {
+              640: {
+                  destroy: true,
+              },
         }
     } ).mount();
 });

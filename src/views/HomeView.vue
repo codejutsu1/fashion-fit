@@ -1,6 +1,7 @@
 <script setup>
 import Reviews from '../components/Reviews.vue'
 import Collection from '../components/Collection.vue'
+import NewCollection from '../components/NewCollection.vue'
 
 </script>
 <template>
@@ -26,98 +27,7 @@ import Collection from '../components/Collection.vue'
       </div>
     </section>
 
-    <section class="bg-[#F9F3EE] py-12">
-      <div class="w-11/12 mx-auto text-[#141415]">
-        <h1 class="font-semibold text-2xl lg:text-4xl lg:leading-[50px]">New Collection!</h1>
-        <p class="text-base lg:text-2xl">Our collections are elegant and of the best quality</p>
-
-        <div class="lg:grid grid-cols-3 gap-8 pt-10">
-          <div class="w-full overflow-hidden">
-            <div class="relative">
-              <img class="w-full h-full object-fit" src="/images/collection/collection-1.jpg" alt="Jean Jacket">
-              <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                <img src="/images/icons/wish.svg" alt="Wish Icon">
-              </div>
-            </div>
-            <div class="w-full bg-[#FDFBF9] py-3 text-center text-[#141415]">
-              <span class="block text-xl">Jean Jacket</span>
-              <span class="font-semibold">N22,000</span>
-            </div>
-          </div> 
-          
-          <div class="w-full overflow-hidden hidden lg:block">
-            <div class="relative">
-              <img class="w-full h-full object-fit" src="/images/collection/collection-2.jpg" alt="Jean Jacket">
-              <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                <img src="/images/icons/wish.svg" alt="Wish Icon">
-              </div>
-            </div>
-            <div class="w-full bg-[#FDFBF9] py-3 text-center text-[#141415]">
-              <span class="block text-xl">Wide-leg pants</span>
-              <span class="font-semibold">N25,000</span>
-            </div>
-          </div> 
-
-          <div class="w-full overflow-hidden hidden lg:block">
-            <div class="relative">
-              <img class="w-full h-full object-fit" src="/images/collection/collection-3.jpg" alt="Jean Jacket">
-              <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                <img src="/images/icons/wish.svg" alt="Wish Icon">
-              </div>
-            </div>
-            <div class="bg-[#FDFBF9] py-3 text-center text-[#141415]">
-              <span class="block text-xl">Brown Bags Set</span>
-              <span class="font-semibold">N60,000</span>
-            </div>
-          </div> 
-
-          <div class="w-full overflow-hidden hidden lg:block">
-            <div class="relative">
-              <img class="w-full h-full object-fit" src="/images/collection/collection-4.jpg" alt="Jean Jacket">
-              <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                <img src="/images/icons/wish.svg" alt="Wish Icon">
-              </div>
-            </div>
-            <div class="bg-[#FDFBF9] py-3 text-center text-[#141415]">
-              <span class="block text-xl">Layered necklace</span>
-              <span class="font-semibold">N12,000</span>
-            </div>
-          </div> 
-
-          <div class="w-full overflow-hidden hidden lg:block">
-            <div class="relative">
-              <img class="w-full h-full object-fit" src="/images/collection/collection-5.jpg" alt="Jean Jacket">
-              <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                <img src="/images/icons/wish.svg" alt="Wish Icon">
-              </div>
-            </div>
-            <div class="bg-[#FDFBF9] py-3 text-center text-[#141415]">
-              <span class="block text-xl">Hoodie</span>
-              <span class="font-semibold">N15,000</span>
-            </div>
-          </div> 
-
-          <div class="w-full overflow-hidden hidden lg:block">
-            <div class="relative">
-              <img class="w-full h-full object-fit" src="/images/collection/collection-6.jpg" alt="Jean Jacket">
-              <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                <img src="/images/icons/wish.svg" alt="Wish Icon">
-              </div>
-            </div>
-            <div class="bg-[#FDFBF9] py-3 text-center text-[#141415]">
-              <span class="block text-xl">Blue Crop Top</span>
-              <span class="font-semibold">N8,000</span>
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-center py-8">
-          <button class="bg-[#307098] py-3 px-9 mx-auto font-bold leading-5 text-[#FFFFFF]">
-            Shop all
-          </button>
-        </div>
-
-      </div>
-    </section>
+    <NewCollection />
 
     <section class="py-14">
       <div class="w-5/6 mx-auto lg:flex justify-between">

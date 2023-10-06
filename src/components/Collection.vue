@@ -1,6 +1,6 @@
 <template>
     <section 
-        class="best-sellers py-14 splide" 
+        class="best-sellers py-14 splide splide1" 
         data-splide='{
             "type":"loop",
             "perPage":3, 
