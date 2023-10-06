@@ -1,9 +1,10 @@
 <script setup>
 import Reviews from '../components/Reviews.vue'
+import Collection from '../components/Collection.vue'
 
 </script>
 <template>
-  <main class="overflow-hidden">
+  <main class="overflow-x-hidden">
     <section class="pt-12 pb-10 w-full lg:w-5/6 mx-auto">
       <div class="text-center text-[#141415]">
         <h1 class="text-4xl lg:text-6xl font-bold lg:leading-[89.6px]">Find your <span class="text-[#FFCC4D]">style</span> in our collection</h1>
@@ -137,83 +138,7 @@ import Reviews from '../components/Reviews.vue'
       </div>
     </section>
 
-    <section class="best-sellers py-14">
-      <div class="w-11/12 mx-auto relative">
-        <div class="best-sellers-div inline-block p-5 text-xl lg:text-2xl font-medium">
-          Our Best Sellers
-        </div>
-        <div class="md:grid grid-cols-3 gap-8">
-          <div class="w-full overflow-hidden best-seller-grid">
-            <div class="relative">
-              <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-1.jpg" alt="Jean Jacket">
-              <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                <img src="/images/icons/wish.svg" alt="Wish Icon">
-              </div>
-            </div>
-            <div class="w-full bg-[#FDFBF9] py-3 text-center text-[#141415]">
-              <span class="block text-xl">Corset Midi Dress</span>
-              <span class="font-semibold">N34,000</span>
-              <div class="flex justify-center py-2">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <span class="ml-2 text-xs">4.9 (67 reviews)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full overflow-hidden best-seller-grid hidden lg:block">
-            <div class="relative">
-              <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-2.jpg" alt="Jean Jacket">
-              <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                <img src="/images/icons/wish.svg" alt="Wish Icon">
-              </div>
-            </div>
-            <div class="w-full bg-[#FDFBF9] py-3 text-center text-[#141415]">
-              <span class="block text-xl">Textured Shorts</span>
-              <span class="font-semibold">N25,000</span>
-              <div class="flex justify-center py-2">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <img src="/images/icons/star-2.svg" alt="star">
-                <span class="ml-2 text-xs">4.5 (41 reviews)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="w-full overflow-hidden best-seller-grid hidden lg:block">
-            <div class="relative">
-              <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-3.jpg" alt="Jean Jacket">
-              <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                <img src="/images/icons/wish.svg" alt="Wish Icon">
-              </div>
-            </div>
-            <div class="w-full bg-[#FDFBF9] py-3 text-center text-[#141415]">
-              <span class="block text-xl">White Sneakers</span>
-              <span class="font-semibold">N34,000</span>
-              <div class="flex justify-center py-2">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <img src="/images/icons/star-1.svg" alt="star">
-                <img src="/images/icons/star-3.svg" alt="star">
-                <span class="ml-2 text-xs">4.0 (24 reviews)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-          <div class="absolute bg-[#CAD7DF] w-11 h-11 flex justify-center items-center rounded-full bottom-1/2 -left-5">
-            <img src="/images/icons/previous.svg" alt="Previous icon">
-          </div>
-          <div class="absolute bg-[#557F99] w-11 h-11 flex justify-center items-center rounded-full bottom-1/2 -right-5">
-            <img src="/images/icons/next.svg" alt="Next Icon">
-          </div>
-        </div>
-    </section>
+    <Collection />
 
     <Reviews />
 
