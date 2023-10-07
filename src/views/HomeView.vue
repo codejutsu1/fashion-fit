@@ -3,12 +3,13 @@ import Reviews from '../components/Reviews.vue'
 import Collection from '../components/Collection.vue'
 import NewCollection from '../components/NewCollection.vue'
 
+AOS.init()
 </script>
 <template>
   <main class="overflow-x-hidden">
     <section class="pt-12 pb-10 w-full lg:w-5/6 mx-auto">
       <div class="text-center text-[#141415]">
-        <h1 class="text-4xl lg:text-6xl font-bold lg:leading-[89.6px]">Find your <span class="text-[#FFCC4D]">style</span> in our collection</h1>
+        <h1 class="text-4xl lg:text-6xl font-bold lg:leading-[89.6px]" d-aos="zoom-in">Find your <span class="text-[#FFCC4D]">style</span> in our collection</h1>
         <div class="text-center w-4/5 lg:w-3/5 px-4 mx-auto pt-2 lg:pt-0">
           <p class="text-base lg:text-2xl lg:leading-9">Fashion is a way of life. Experience fashion at its best as you shop from our collections </p>
         </div>
