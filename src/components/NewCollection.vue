@@ -5,7 +5,13 @@ const options = {
   perMove: 1,
   gap: '10px',
   autoplay: true,
-  interval: 2500
+  interval: 2500,
+  mediaQuery: 'min',
+  breakpoints: {
+    640: {
+        destroy: true,
+    },
+  }
 }
 
 </script>
