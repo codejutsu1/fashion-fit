@@ -14,7 +14,6 @@ const options = {
       },
     }
 }
-
 </script>
 <template>
     <section class="best-sellers py-14 splide splide1">
