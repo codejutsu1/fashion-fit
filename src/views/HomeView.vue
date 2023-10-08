@@ -7,12 +7,13 @@ import NewCollection from '../components/NewCollection.vue'
 <template>
   <main class="overflow-x-hidden">
     <section class="pt-12 pb-10 w-full lg:w-5/6 mx-auto">
-      <div class="text-center text-[#141415]">
-        <h1 class="text-4xl lg:text-6xl font-bold lg:leading-[89.6px]" data-aos="zoom-in">Find your <span class="text-[#FFCC4D]">style</span> in our collection</h1>
+      <div class="relative text-center text-[#141415]">
+        <h1 class="text-4xl lg:text-6xl font-bold lg:leading-[89.6px]" data-aos="fade-up-left" data-aos-duration="700">Find your <span class="text-[#FFCC4D]">style</span> in our collection</h1>
         <div class="text-center w-4/5 lg:w-3/5 px-4 mx-auto pt-2 lg:pt-0">
-          <p data-aos="zoom-out" class="text-base lg:text-2xl lg:leading-9">Fashion is a way of life. Experience fashion at its best as you shop from our collections </p>
+          <p data-aos="fade-up-left" data-aos-duration="700" class="text-base lg:text-2xl lg:leading-9">Fashion is a way of life. Experience fashion at its best as you shop from our collections </p>
         </div>
-        <button class="bg-[#307098] py-3 px-9 mt-10 font-bold leading-5 text-[#FFFFFF]">
+        <Transition ></Transition>
+        <button data-aos="fade-up-right" data-aos-duration="700" class="bg-[#307098] py-3 px-9 mt-10 font-bold leading-5 text-[#FFFFFF]">
           Shop Now
         </button>
       </div>

@@ -6,14 +6,15 @@ import Reviews from '../components/Reviews.vue'
   <main class="overflow-hidden">
     <section class="bg-about bg-center bg-cover py-10 lg:py-14">
       <div class="lg:w-1/2 mx-auto lg:py-14 flex items-center justify-center px-5 lg:px-1">
-        <div class="text-center">
-          <h1 class="text-2xl lg:text-5xl font-semibold lg:leading-[64.8px] text-[#FFFFFF]">
+        <div class="relative text-center">
+          <h1  data-aos="fade-down-right" data-aos-duration="700" data-aos-delay="0" class="text-2xl lg:text-5xl font-semibold lg:leading-[64.8px] text-[#FFFFFF]">
             How did FASHION FIT become a huge success
           </h1>
-          <p class="text-[#FFFFFF] text-base lg:text-2xl py-2">Get inspired as you read about us</p>
-          <button class="bg-[#307098] py-3 px-9 mt-10 font-bold leading-5 text-[#FFFFFF]">
+          <Transition></Transition>
+          <p data-aos="fade-down-right" data-aos-duration="700" class="text-[#FFFFFF] text-base lg:text-2xl py-2">Get inspired as you read about us</p>
+          <button data-aos="fade-down-left" data-aos-duration="700" class="bg-[#307098] py-3 px-9 mt-10 font-bold leading-5 text-[#FFFFFF]">
             Shop Now
-        </button>
+          </button>
         </div>
       </div>
     </section>

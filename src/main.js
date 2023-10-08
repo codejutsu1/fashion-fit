@@ -14,6 +14,7 @@ app.use(router)
 
 app.use(VueSplide)
 
-app.use(Aos.init())
+app.use(Aos.init()) 
+
 
 app.mount('#app')
