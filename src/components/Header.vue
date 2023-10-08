@@ -27,7 +27,7 @@ function removeCollection() {
 </script>
 
 <template>
-    <header class="w-full">
+    <header class="w-full fixed z-40 bg-white header-shadow">
         <div class="relative w-5/6 mx-auto flex items-center justify-between py-8">
             <div >
                 <img src="/images/logo/logo.svg" alt="Fashion Fit Logo">
@@ -221,3 +221,9 @@ function removeCollection() {
         <div @click="removeCollection" class="inset-y-0 inset-x-0 z-40" :class="{'hidden' : !collectionOpen, 'fixed': collectionOpen}"></div>
     </header>
 </template>
+
+<style>
+.header-shadow{
+    box-shadow: 0px 2px 12px 0px #1414150F;
+}
+</style>

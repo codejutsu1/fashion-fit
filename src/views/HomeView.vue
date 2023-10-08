@@ -5,7 +5,7 @@ import NewCollection from '../components/NewCollection.vue'
 
 </script>
 <template>
-  <main class="overflow-x-hidden">
+  <main class="overflow-x-hidden pt-28">
     <section class="pt-12 pb-10 w-full lg:w-5/6 mx-auto">
       <div class="relative text-center text-[#141415]">
         <h1 class="text-4xl lg:text-6xl font-bold lg:leading-[89.6px]" data-aos="fade-up-left" data-aos-duration="700">Find your <span class="text-[#FFCC4D]">style</span> in our collection</h1>

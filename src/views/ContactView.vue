@@ -6,7 +6,7 @@ import Footer from '../components/Footer.vue'
 </script>
 
 <template>
-    <main>
+    <main class="pt-28">
         <section class="bg-contact h-screen bg-cover bg-center bg-no-repeat flex items-end">
             <div class="w-1/2 mx-auto flex justify-center h-2/5">
                 <div class="text-[#141415]">

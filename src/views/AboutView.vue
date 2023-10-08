@@ -3,7 +3,7 @@ import Reviews from '../components/Reviews.vue'
 
 </script>
 <template>
-  <main class="overflow-hidden">
+  <main class="overflow-hidden pt-28">
     <section class="bg-about bg-center bg-cover py-10 lg:py-14">
       <div class="lg:w-1/2 mx-auto lg:py-14 flex items-center justify-center px-5 lg:px-1">
         <div class="relative text-center">
