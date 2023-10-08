@@ -20,10 +20,6 @@ import NewCollection from '../components/NewCollection.vue'
       <div class="pt-10">
         <div class="relative">
           <img class="w-full h-full object-fit" src="/images/pictures/picture-1.jpg" alt="Landing page Image">
-          <div class="absolute hidden lg:flex gap-2 items-center py-4 px-5 rounded-[40px] landing bg-[#FFFFFF] right-0 bottom-40">
-            <img src="/images/socials/whatsapp.svg" alt="Whatsapp">
-            <span class="text-xl font-medium text-[#0A3B5A]">Chat with an expert</span>
-          </div>
         </div>
       </div>
     </section>

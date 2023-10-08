@@ -14,6 +14,10 @@ router.beforeEach(() => {
 </script>
 
 <template>
+    <a href="https://wa.me/+2347080119082" target="_blank" class="fixed flex gap-2 items-center py-4 px-5 rounded-[40px] landing bg-[#FFFFFF] bottom-5 lg:bottom-10 right-5 lg:right-10">
+      <img src="/images/socials/whatsapp.svg" alt="Whatsapp">
+      <span class="hidden lg:block text-xl font-medium text-[#0A3B5A]">Chat with an expert</span>
+    </a>
     <footer class="bg-[#F3E5D9]">
       <div>
         <div class="lg:w-5/6 mx-auto lg:flex justify-between space-y-3 lg:space-y-0 py-10">
