@@ -46,3 +46,13 @@
 
   box-shadow: 0px 8px 17px 0px #14141514;
 }
+
+.res-search-input {
+  border: 1px solid #7798AD;
+}
+
+
+.router-link-exact-active {
+  color: #307098;
+  font-weight: 700;
+}

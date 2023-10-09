@@ -35,7 +35,7 @@ function removeCollection() {
             <nav>
                 <ul class="hidden lg:flex space-x-16 font-normal text relative z-50">
                     <li>
-                        <RouterLink class="text-[#307098] font-bold" to="/">Home</RouterLink>
+                        <RouterLink  to="/">Home</RouterLink>
                     </li>
                     <li>
                         <RouterLink to="/about">About us</RouterLink>
@@ -54,14 +54,16 @@ function removeCollection() {
                 <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/cart.svg" alt="Cart Icon">
                 <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/wishlist.svg" alt="Wishlist Icon">
             </div>
+            
             <div @click="isOpen = !isOpen" class="lg:hidden">
                 <img src="/images/icons/menu.svg" alt="Menu Bar">
             </div>
             
             <!-- Responsive mobile -->
-            <div class="fixed w-full bg-[#FFFFFF] inset-x-0 top-0 z-40 pb-8" v-if="isOpen">
+            <div class="fixed w-[70%] bg-[#FFFFFF] top-16 right-0 z-40 pb-8 transition ease-in duration-500" v-if="isOpen">
+                <!-- <div class="fixed bg-[#D9D9D9] inset-x-0 inset-y-0 overflow-hidden opacity-40"></div> -->
                 <div class="flex justify-between pt-8 px-4">
-                    <div class="border flex space-x-3 w-4/5 px-4">
+                    <div class="border flex space-x-3 w-4/5 px-4 res-search-input">
                         <img class="w-4" src="/images/icons/search-black.svg" alt="Search Icon">
                         <div class="-full h-full">
                             <input type="text" class="h-full w-full focus:outline-none placeholder:text-xs placeholder:font-medium placeholder:text-[#141415]" placeholder="Search">
@@ -72,18 +74,19 @@ function removeCollection() {
                     </div>
                 </div>
                 <nav>
-                    <ul class="py-8 text-[#141415]">
+                    <ul class="pt-4 pb-8 text-[#141415]">
                         <li>
-                            <RouterLink class="border-b border-[#CAD7DF] p-4 w-full block" to="/">Home</RouterLink>
+                            <RouterLink class="border-b border-[#CAD7DF] px-4 py-3 w-full block" to="/">Home</RouterLink>
                         </li>
                         <li>
-                            <RouterLink class="border-b border-[#CAD7DF] p-4 w-full block" to="/about">About us</RouterLink>
+                            <RouterLink class="border-b border-[#CAD7DF] px-4 py-3 w-full block" to="/about">About us</RouterLink>
+                        </li>
+                        <li class="flex justify-between items-center pr-8 border-b border-[#CAD7DF]">
+                            <a class=" px-4 py-3 w-full block" href="#">Collections</a>
+                            <img src="/images/icons/right.svg" alt="Right">
                         </li>
                         <li>
-                            <a class="border-b border-[#CAD7DF] p-4 w-full block" href="#">Collections</a>
-                        </li>
-                        <li>
-                            <RouterLink class="border-b border-[#CAD7DF] p-4 w-full block" to="/contact-us">Contact us</RouterLink>
+                            <RouterLink class="border-b border-[#CAD7DF] px-4 py-3 w-full block" to="/contact-us">Contact us</RouterLink>
                         </li>
                     </ul>
                 </nav>

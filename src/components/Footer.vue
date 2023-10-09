@@ -108,7 +108,7 @@ router.beforeEach(() => {
           </div>
         </div>
         <hr class="border border-[#82776D]">
-        <div class="text-[#141415] text-xs font-medium text-center py-5">
+        <div class="text-[#141415] text-xs font-medium text-center py-5 space-y-2">
           <p>2023 FASHION FIT All right reserved. Designed by <a href="https://twitter.com/AvoDesigns_" target="_blank" class="underline">Adenike Abioye</a></p>
           <p>Developed with TailwindCSS, VueJs and &#10084; by <a href="https://github.com/codejutsu1" target="_blank" class="underline">Codejutsu</a>.</p>
         </div>
