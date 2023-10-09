@@ -1,9 +1,10 @@
 <script setup>
 
 const options = {
-  type: 'loop',
+  type: 'slide',
   perMove: 1,
   gap: '10px',
+  rewind: true,
   autoplay: true,
   interval: 2500,
   mediaQuery: 'min',

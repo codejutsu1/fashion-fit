@@ -41,7 +41,7 @@ router.beforeEach(() => {
             </div>
             <ul 
               :class="{'block' : aboutDropdown, 'hidden' : !aboutDropdown}"
-              class="py-4 px-4 lg:px-0 space-y-2 text-xs lg:text-base lg:block border-b border-[#141415]"
+              class="py-4 px-4 lg:px-0 space-y-2 text-xs lg:text-base lg:block lg:border-0 border-b border-[#141415]"
             >
               <li>
                 <a href="#">Our Story</a>
@@ -70,7 +70,7 @@ router.beforeEach(() => {
               <img v-if="!productDropdown" class="lg:hidden" src="/images/icons/dropdown-2.svg" alt="Dropdown">
               <img v-if="productDropdown" class="lg:hidden" src="/images/icons/dropup.svg" alt="Dropup">
             </div>
-            <ul class="py-4 px-4 lg:px-0 space-y-2 text-xs lg:text-base lg:block border-b border-[#141415]" :class="{'block' : productDropdown, 'hidden' : !productDropdown}">
+            <ul class="py-4 px-4 lg:px-0 space-y-2 text-xs lg:text-base lg:block lg:border-0 border-b border-[#141415]" :class="{'block' : productDropdown, 'hidden' : !productDropdown}">
               <li>
                 <a href="#">Men</a>
               </li>
