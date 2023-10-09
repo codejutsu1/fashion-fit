@@ -22,7 +22,7 @@ const options = {
           <h1 class="font-semibold text-2xl lg:text-4xl lg:leading-[50px]">New Collection!</h1>
           <p class="text-base lg:text-2xl">Our collections are elegant and of the best quality</p>
 
-          <div class="lg:!grid grid-cols-3 lg:gap-8 pt-16 w-full splide__list">
+          <div class="sm:!grid grid-cols-3 sm:gap-8 pt-16 w-full splide__list">
             <div class="w-full overflow-x-hidden splide__slide">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-1.jpg" alt="Jean Jacket">

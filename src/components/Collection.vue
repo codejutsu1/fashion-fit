@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue'
+
 const options = {
   type:"loop",
   perPage:3, 
@@ -14,6 +16,26 @@ const options = {
       },
     }
 }
+
+const image = ref()
+
+const images = ref([
+  "/images/best-sellers/best-seller-1.jpg",
+  "/images/best-sellers/best-seller-2.jpg",
+  "/images/best-sellers/best-seller-3.jpg",
+])
+
+function hoverImages() 
+{
+  images.value.forEach((item, index) => {
+   
+  })
+}
+
+function originalImage()
+{
+  console.log('mouse leave')
+}
 </script>
 <template>
     <section class="best-sellers py-14 splide splide1">
@@ -24,7 +46,7 @@ const options = {
           </div>
           <div class="w-full splide__list">
             <div class="overflow-x-hidden best-seller-grid splide__slide">
-              <div class="relative">
+              <div class="relative hover" @mouseenter="hoverImages" @mouseleave="originalImage">
                 <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-1.jpg" alt="Jean Jacket">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">

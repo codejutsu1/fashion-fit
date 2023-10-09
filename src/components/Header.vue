@@ -33,9 +33,9 @@ function removeCollection() {
                 <img src="/images/logo/logo.svg" alt="Fashion Fit Logo">
             </div>
             <nav>
-                <ul class="hidden lg:flex space-x-16 font-bold text-base text relative z-50">
+                <ul class="hidden lg:flex space-x-16 font-normal text relative z-50">
                     <li>
-                        <RouterLink class="text-[#307098]" to="/">Home</RouterLink>
+                        <RouterLink class="text-[#307098] font-bold" to="/">Home</RouterLink>
                     </li>
                     <li>
                         <RouterLink to="/about">About us</RouterLink>
