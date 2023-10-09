@@ -66,7 +66,7 @@ function removeCollection() {
                     <div class="border flex space-x-3 w-4/5 px-4 res-search-input">
                         <img class="w-4" src="/images/icons/search-black.svg" alt="Search Icon">
                         <div class="-full h-full">
-                            <input type="text" class="h-full w-full focus:outline-none placeholder:text-xs placeholder:font-medium placeholder:text-[#141415]" placeholder="Search">
+                            <input type="text" class="h-full w-full focus:outline-none placeholder:text-xs placeholder:font-medium placeholder:text-[#141415]" placeholder="Search" name="search">
                         </div>
                     </div>
                     <div @click="isOpen = !isOpen" class="flex items-center p-4">

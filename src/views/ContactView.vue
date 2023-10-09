@@ -21,7 +21,7 @@ import Footer from '../components/Footer.vue'
                 <h1 class="lg:text-2xl text-xl font-medium text-center">Do you have any enquires?</h1>
                 <p class="text-center text-sm lg:text-base font-light py-3">We are available 24 hours, 7 days.</p>
 
-                <div class="lg:flex pt-10 justify-between">
+                <div class="lg:flex pt-10 justify-between space-y-10 lg:space-y-0">
                     <div class="flex justify-between lg:gap-x-5">
                         <div class="w-[100px] h-[100px] p-[30px] rounded-[60px] bg-[#F7EDE5] contact flex items-center justify-center">
                             <img src="/images/icons/phone.svg" alt="Phone">
@@ -40,13 +40,13 @@ import Footer from '../components/Footer.vue'
                         </div>
                     </div>
 
-                    <div class="w-2/5 flex gap-x-5">
+                    <div class="lg:w-2/5 flex justify-between items-center lg:gap-x-5">
                         <div class="w-[100px] h-[100px] p-[30px] rounded-[60px] bg-[#F7EDE5] contact flex items-center justify-center">
-                            <img src="/images/icons/email.svg" alt="Email">
+                            <img class="w-11 lg:w-auto" src="/images/icons/email.svg" alt="Email">
                         </div>
 
                         <div>
-                            <h1 class="text-xl font-medium">You can send a mail.</h1>
+                            <h1 class="lg:text-xl text-base font-medium">You can send a mail.</h1>
                             <span class="pt-4 text-[#2BA646] space-y-1 font-medium block underline">
                                 fashionfit@gmail.com
                             </span>
