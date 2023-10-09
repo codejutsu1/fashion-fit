@@ -12,7 +12,7 @@ import Reviews from '../components/Reviews.vue'
           </h1>
           <Transition></Transition>
           <p data-aos="fade-down-right" data-aos-duration="700" class="text-[#FFFFFF] text-base lg:text-2xl py-2">Get inspired as you read about us</p>
-          <button data-aos="fade-down-left" data-aos-duration="700" class="bg-[#307098] py-3 px-9 mt-10 font-bold leading-5 text-[#FFFFFF]">
+          <button data-aos="fade-down-left" data-aos-duration="700" class="bg-[#307098] py-3 px-9 mt-10 font-bold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
             Shop Now
           </button>
         </div>
@@ -23,7 +23,7 @@ import Reviews from '../components/Reviews.vue'
       <div class="w-5/6 mx-auto">
         <div class="relative py-10 space-y-5 lg:space-y-0">
           <div class="mx-4 lg:ml-32">
-            <img class="z-40 relative" src="/images/pictures/picture-3.jpg" alt="Cute Couples">
+            <img class="z-30 relative" src="/images/pictures/picture-3.jpg" alt="Cute Couples">
           </div>
           <div class="lg:flex justify-end bg-[#F1E0D2] lg:absolute lg:top-[15%] py-10 lg:py-32">
             <div class="lg:w-1/2">
@@ -101,7 +101,7 @@ import Reviews from '../components/Reviews.vue'
         <h1 class="lg:text-4xl text-2xl font-semibold leading-[50px]">Newsletter</h1>
         <p class="lg:text-2xl text-base pb-8">Let’s deliver fashion goodness into your inbox</p>
         <input type="email" class="block w-11/12 lg:w-[75%] mx-auto bg-[#FFFFFF] placeholder:text-[#285F81] text-[#285F81] placeholder:text-xs py-5 px-4" placeholder="Enter your email address">
-        <button class="bg-[#307098] py-3 px-9 mt-5 font-bold leading-5 text-[#FFFFFF]">
+        <button class="bg-[#307098] py-3 px-9 mt-5 font-bold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
             Subscribe
         </button>
       </div>

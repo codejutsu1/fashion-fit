@@ -13,13 +13,14 @@ import NewCollection from '../components/NewCollection.vue'
           <p data-aos="fade-up-left" data-aos-duration="700" class="text-base lg:text-2xl lg:leading-9">Fashion is a way of life. Experience fashion at its best as you shop from our collections </p>
         </div>
         <Transition ></Transition>
-        <button data-aos="fade-up-right" data-aos-duration="700" class="bg-[#307098] py-3 px-9 mt-10 font-bold leading-5 text-[#FFFFFF]">
+        <button data-aos="fade-up-right" data-aos-duration="700" class="bg-[#307098] py-3 px-9 mt-10 font-bold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
           Shop Now
         </button>
       </div>
       <div class="pt-10">
         <div class="relative">
-          <img class="w-full h-full object-fit" src="/images/pictures/picture-1.jpg" alt="Landing page Image">
+          <img class="md:block hidden w-full h-full object-fit" src="/images/pictures/picture-1.jpg" alt="Landing page Image">
+          <img class="md:hidden w-full h-full object-fit" src="/images/pictures/picture-1-res.jpg" alt="Landing page Image">
         </div>
       </div>
     </section>
@@ -36,7 +37,7 @@ import NewCollection from '../components/NewCollection.vue'
             <h1 class="text-2xl lg:text-4xl font-semibold lg:leading-[50px] text-outfit">Outfit for every occassion</h1>
             <p class="text-base pt-2 lg:text-2xl">Explore outfits that are perfect for your next beach outing</p>
             <div class="flex justify-center pt-5">
-              <button class="bg-[#307098] py-3 px-9 mx-auto font-bold leading-5 text-[#FFFFFF]">
+              <button class="bg-[#307098] py-3 px-9 mx-auto font-bold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
                 Shop now
               </button>
             </div>
@@ -156,7 +157,7 @@ import NewCollection from '../components/NewCollection.vue'
         </div>
 
         <div class="flex justify-center py-2">
-          <button class="bg-[#307098] py-3 px-9 mx-auto font-bold leading-5 text-[#FFFFFF]">
+          <button class="bg-[#307098] py-3 px-9 mx-auto font-bold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
             More blogs
           </button>
         </div>
