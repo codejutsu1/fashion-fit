@@ -1,17 +1,19 @@
 <script setup>
-    function togglePassword(){
+import { ref } from 'vue';
 
-    }
 
-    function goBack() {
-        
-    }
+const inputField = ref('password')
+
+function togglePassword()
+{
+    inputField.value === 'password' ? inputField.value = 'text' : inputField.value = 'password'
+}
 </script>
 <template>
      <section class="lg:pt-28 relative z-[60] lg:z-30 bg-[#FFFFFF]">
         <div class="lg:py-20 py-5 w-11/12 lg:w-3/5 mx-auto text-[#141415]">
             <h1 class="font-semibold text-2xl lg:text-4xl leading-[50.4px] text-center">Sign in</h1>
-            <div class="absolute top-9 right-10" @click="goBack">
+            <div class="absolute top-9 right-10" @click="$router.go(-1)">
                 <img class="w-6 h-6" src="/images/icons/close.svg" alt="Close">
             </div>
             <form action="#" class="py-10 border-b border-[#B1C4D0]">
@@ -27,8 +29,8 @@
                             Enter your password
                         </label>
                         <div class="flex justify-between items-center px-4 border border-[#7798AD]">
-                            <input type="password" id="password" name="password" placeholder="Enter password" class="block w-full mt-1 py-4 border-0 placeholder:text-sm placeholder:text-[#8DA9BB] focus:outline-0">
-                            <img @click="togglePassword('#password')" class="w-6 py-2 cursor-pointer" src="/images/icons/password.svg" alt="Password Icon">
+                            <input :type="inputField" id="password" name="password" placeholder="Enter password" class="block w-full mt-1 py-4 border-0 placeholder:text-sm placeholder:text-[#8DA9BB] focus:outline-0">
+                            <img @click="togglePassword()" class="w-6 py-2 cursor-pointer" src="/images/icons/password.svg" alt="Password Icon">
                         </div>
                     </div>
                     <div>
