@@ -1,10 +1,3 @@
-<script setup>
-import Header from '../components/Header.vue'
-import Footer from '../components/Footer.vue'
-
-
-</script>
-
 <template>
     <main class="pt-28">
         <section class="bg-contact h-screen bg-cover bg-center bg-no-repeat flex items-end">
