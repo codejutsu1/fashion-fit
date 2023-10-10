@@ -1,14 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 
-const inputField = ref('password')
+function togglePassword(inputClass)
+{
+    const input = document.querySelector(inputClass);
 
-function togglePassword() {
-    if(inputField.value === 'password') {
-        inputField.value = 'text'
-    }else {
-        inputField.value = 'password'
-    }
+     if (input.getAttribute('type') === 'password') input.setAttribute('type', 'text') 
+     else input.setAttribute('type', 'password')
 }
 </script>
 <template>
@@ -28,8 +26,8 @@ function togglePassword() {
                             Create a password
                         </label>
                         <div class="flex justify-between items-center px-4 border border-[#7798AD]">
-                            <input :type="inputField" id="password" name="password" placeholder="Enter password" class="block w-full mt-1 py-4 border-0 placeholder:text-sm placeholder:text-[#8DA9BB] focus:outline-0">
-                            <img @click="togglePassword()" class="w-6 py-2 cursor-pointer" src="/images/icons/password.svg" alt="Password Icon">
+                            <input type="password" id="password" name="password" placeholder="Enter password" class="block w-full mt-1 py-4 border-0 placeholder:text-sm placeholder:text-[#8DA9BB] focus:outline-0">
+                            <img @click="togglePassword('#password')" class="w-6 py-2 cursor-pointer" src="/images/icons/password.svg" alt="Password Icon">
                         </div>
                     </div>
                     <div>
@@ -37,8 +35,8 @@ function togglePassword() {
                             Confirm password
                         </label>
                         <div class="flex justify-between items-center px-4 border border-[#7798AD]">
-                            <input :type="inputField" id="confirm_password" name="confirm_password" placeholder="Enter password" class="block w-full mt-1 py-4 border-0 placeholder:text-sm placeholder:text-[#8DA9BB] focus:outline-0">
-                            <img @click="togglePassword()" class="w-6 py-2 cursor-pointer" src="/images/icons/password.svg" alt="Password Icon">
+                            <input type="password" id="confirm_password" name="confirm_password" placeholder="Enter password" class="block w-full mt-1 py-4 border-0 placeholder:text-sm placeholder:text-[#8DA9BB] focus:outline-0">
+                            <img @click="togglePassword('#confirm_password')" class="w-6 py-2 cursor-pointer" src="/images/icons/password.svg" alt="Password Icon">
                         </div>
                     </div>
                     <div>
