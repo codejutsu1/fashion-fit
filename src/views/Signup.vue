@@ -10,9 +10,15 @@ function togglePassword(inputClass)
 }
 </script>
 <template>
-    <section class="pt-28">
-        <div class="py-20 w-11/12 lg:w-3/5 mx-auto text-[#141415]">
+    <section class="lg:pt-28 relative z-[60] lg:z-30 bg-[#FFFFFF]">
+        <div class="lg:py-20 py-5 w-11/12 lg:w-3/5 mx-auto text-[#141415]">
+            <div class="absolute top-[35px] left-10" @click="$router.go(-1)">
+                <img class="w-6 h-6" src="/images/icons/back.svg" alt="Back">
+            </div>
             <h1 class="font-semibold text-2xl lg:text-4xl leading-[50.4px] text-center">Create an account</h1>
+            <div class="absolute top-[35px] right-10" @click="$router.push('/')">
+                <img class="w-6 h-6" src="/images/icons/close.svg" alt="Close">
+            </div>
             <form action="#" class="py-10 border-b border-[#B1C4D0]">
                 <div class="w-11/12 lg:w-4/5 mx-auto space-y-10">
                     <div>
@@ -49,9 +55,9 @@ function togglePassword(inputClass)
             <div class="py-10 text-[#141415] w-4/5 mx-auto space-y-5">
                 <h1 class="text-center font-medium text-xl lg:text-2xl">Do you have an account?</h1>
                 <div>
-                    <a href="#" class="w-full block border border-[#307098] text-center py-3 font-semibold text-[#307098]">
+                    <RouterLink to="signin" class="w-full block border border-[#307098] text-center py-3 font-semibold text-[#307098]">
                         Sign in
-                    </a>
+                    </RouterLink>
                 </div>
             </div>
         </div>

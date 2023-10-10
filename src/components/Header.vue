@@ -92,10 +92,10 @@ function removeCollection() {
                 </nav>
 
                 <div class="px-4 text-[#141415] space-y-3">
-                    <div class="flex items-center space-x-2">
+                    <RouterLink to="signin" class="flex items-center space-x-2">
                         <img class="w-7 h-7" src="/images/icons/person.svg" alt="Person">
                         <span>My Account</span>
-                    </div>
+                    </RouterLink>
                     <div class="flex items-center space-x-2">
                         <img class="w-7 h-7" src="/images/icons/wishlist.svg" alt="Wishlist">
                         <span>My Wishlist</span>

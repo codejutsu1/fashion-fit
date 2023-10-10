@@ -12,8 +12,11 @@ function togglePassword()
 <template>
      <section class="lg:pt-28 relative z-[60] lg:z-30 bg-[#FFFFFF]">
         <div class="lg:py-20 py-5 w-11/12 lg:w-3/5 mx-auto text-[#141415]">
+            <div class="absolute top-[35px] left-10" @click="$router.go(-1)">
+                <img class="w-6 h-6" src="/images/icons/back.svg" alt="Back">
+            </div>
             <h1 class="font-semibold text-2xl lg:text-4xl leading-[50.4px] text-center">Sign in</h1>
-            <div class="absolute top-9 right-10" @click="$router.go(-1)">
+            <div class="absolute top-[35px] right-10" @click="$router.push('/')">
                 <img class="w-6 h-6" src="/images/icons/close.svg" alt="Close">
             </div>
             <form action="#" class="py-10 border-b border-[#B1C4D0]">
@@ -46,9 +49,9 @@ function togglePassword()
             <div class="py-10 text-[#141415] w-4/5 mx-auto space-y-5">
                 <h1 class="text-center font-medium text-xl lg:text-2xl">New to Flair?</h1>
                 <div>
-                    <a href="#" class="w-full block border border-[#307098] text-center py-3 font-semibold text-[#307098]">
+                    <RouterLink to="signup" class="w-full block border border-[#307098] text-center py-3 font-semibold text-[#307098]">
                         Create an account
-                    </a>
+                    </RouterLink>
                 </div>
             </div>
         </div>
