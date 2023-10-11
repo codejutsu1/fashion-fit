@@ -2,11 +2,13 @@
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router';
 import Cart from './Cart.vue'
+import Wishlist from './Wishlist.vue'
 
 const isOpen = ref(false);
 const collectionOpen = ref(false)
 const body = document.querySelector("body"); 
 const cartOpen = ref(false)
+const wishlistOpen = ref(false)
 
 const router = useRouter()
 
@@ -55,7 +57,7 @@ function removeCollection() {
                 <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/search.svg" alt="Search Icon">
                 <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/person.svg" alt="Person Icon">
                 <img @click="cartOpen = true" class="w-full h-full object-fit cursor-pointer" src="/images/icons/cart.svg" alt="Cart Icon">
-                <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/wishlist.svg" alt="Wishlist Icon">
+                <img @click="wishlistOpen = true" class="w-full h-full object-fit cursor-pointer" src="/images/icons/wishlist.svg" alt="Wishlist Icon">
             </div>
             
             <div @click="isOpen = !isOpen" class="lg:hidden">
@@ -99,7 +101,7 @@ function removeCollection() {
                         <img class="w-7 h-7" src="/images/icons/person.svg" alt="Person">
                         <span>My Account</span>
                     </RouterLink>
-                    <div class="flex items-center space-x-2 py-1">
+                    <div class="flex items-center space-x-2 py-1" @click="wishlistOpen = true">
                         <img class="w-7 h-7" src="/images/icons/wishlist.svg" alt="Wishlist">
                         <span>My Wishlist</span>
                     </div>
@@ -228,6 +230,7 @@ function removeCollection() {
     </header>
 
     <Cart v-if="cartOpen" @closeCart="cartOpen = false" @closeMenu="isOpen = false" />
+    <Wishlist v-if="wishlistOpen" @closeWishlist="wishlistOpen = false" @closeMenu="isOpen = false" />
 </template>
 
 <style>
