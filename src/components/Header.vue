@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router';
 import Cart from './Cart.vue'
 import Wishlist from './Wishlist.vue'
 import Search from './Search.vue'
+import CollectionMobile from './CollectionMobile.vue'
 
 const isOpen = ref(false);
 const collectionOpen = ref(false)
@@ -67,7 +68,7 @@ function removeCollection() {
             </div>
             
             <!-- Responsive mobile -->
-            <div class="fixed lg:hidden w-[70%] bg-[#FFFFFF] top-16 right-0 z-40 pb-8 transition ease-in duration-500" v-if="isOpen">
+            <div class="fixed lg:hidden w-[70%] h-3/5 border-2 bg-[#FFFFFF] top-16 right-0 z-40 pb-8 transition ease-in duration-500" v-if="isOpen">
                 <!-- <div class="fixed bg-[#D9D9D9] inset-x-0 inset-y-0 overflow-hidden opacity-40"></div> -->
                 <div class="flex justify-between pt-8 px-4">
                     <div class="border flex space-x-3 w-4/5 px-4 res-search-input">
@@ -234,6 +235,7 @@ function removeCollection() {
     <Cart v-if="cartOpen" @closeCart="cartOpen = false" @closeMenu="isOpen = false" />
     <Wishlist v-if="wishlistOpen" @closeWishlist="wishlistOpen = false" @closeMenu="isOpen = false" />
     <Search v-if="searchOpen" @closeSearch="searchOpen = false" />
+    <CollectionMobile />
 </template>
 
 <style>
