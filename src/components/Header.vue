@@ -61,11 +61,38 @@ function closeMobile() {
                     </li>
                 </ul>
             </nav>
-            <div class="hidden lg:flex space-x-5">
-                <img @click="searchOpen = true" class="w-full h-full object-fit cursor-pointer" src="/images/icons/search.svg" alt="Search Icon">
-                <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/person.svg" alt="Person Icon">
-                <img @click="cartOpen = true" class="w-full h-full object-fit cursor-pointer" src="/images/icons/cart.svg" alt="Cart Icon">
-                <img @click="wishlistOpen = true" class="w-full h-full object-fit cursor-pointer" src="/images/icons/wishlist.svg" alt="Wishlist Icon">
+            <div class="hidden lg:flex">
+                <div @click="searchOpen = true" class="relative w-full px-3 group cursor-pointer">
+                    <img class="w-full h-full object-fit" src="/images/icons/search.svg" alt="Search Icon">
+                    <div class="bg-[#215373] group-hover:block hidden absolute px-7 py-1 -left-4 -bottom-10 ">
+                        <div class="arrow"></div>
+                        <span class="block text-xs text-[#FFFFFF] text-center font-medium">Search</span>
+                    </div>
+                </div> 
+                <div class="relative w-full px-3 group cursor-pointer">
+                    <RouterLink to="signin" class="flex items-center space-x-2 py-1">
+                        <img class="w-full h-full object-fit" src="/images/icons/person.svg" alt="Person Icon">
+                        <div class="bg-[#215373] group-hover:block hidden absolute px-6 py-1 -left-4 -bottom-10">
+                            <div class="arrow"></div>
+                            <span class="block text-xs text-[#FFFFFF] text-center font-medium">Account</span>
+                        </div>
+                    </RouterLink>
+                </div>
+                <div @click="cartOpen = true" class="relative w-full px-3 group cursor-pointer">
+                    <img class="w-full h-full object-fit" src="/images/icons/cart.svg" alt="Cart Icon">
+                    <div class="bg-[#215373] group-hover:block hidden absolute px-7 mx-2 py-1 -left-4 -bottom-10 z-40">
+                        <div class="arrow"></div>
+                        <span class="block text-xs text-[#FFFFFF] text-center font-medium">Cart</span>
+                    </div>
+                </div>
+                <div @click="wishlistOpen = true" class="relative w-full px-3 group cursor-pointer">
+                    <img class="w-full h-full object-fit" src="/images/icons/wishlist.svg" alt="Wishlist Icon">
+                    <div class="bg-[#215373] group-hover:block hidden absolute px-6 py-1 -left-4 -bottom-10">
+                        <span class="block text-xs text-[#FFFFFF] text-center font-medium">Wishlist</span>
+                        <!-- ToolTip -->
+                        <div class="arrow"></div>
+                    </div>
+                </div>
             </div>
             
             <div @click="isOpen = !isOpen" class="lg:hidden">
@@ -246,5 +273,14 @@ function closeMobile() {
 <style>
 .header-shadow{
     box-shadow: 0px 2px 12px 0px #1414150F;
+}
+.arrow {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%);
+    border: 10px solid;
+    border-color: #0000 #0000 #215373 #0000;
 }
 </style>
