@@ -1,10 +1,12 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router';
+import Cart from './Cart.vue'
 
 const isOpen = ref(false);
 const collectionOpen = ref(false)
 const body = document.querySelector("body"); 
+const cartOpen = ref(false)
 
 const router = useRouter()
 
@@ -23,6 +25,7 @@ function removeCollection() {
     body.style.overflow = 'auto'
     collectionOpen.value = false
 }
+
 
 </script>
 
@@ -51,7 +54,7 @@ function removeCollection() {
             <div class="hidden lg:flex space-x-5">
                 <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/search.svg" alt="Search Icon">
                 <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/person.svg" alt="Person Icon">
-                <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/cart.svg" alt="Cart Icon">
+                <img @click="cartOpen = true" class="w-full h-full object-fit cursor-pointer" src="/images/icons/cart.svg" alt="Cart Icon">
                 <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/wishlist.svg" alt="Wishlist Icon">
             </div>
             
@@ -223,6 +226,8 @@ function removeCollection() {
 
         <div @click="removeCollection" class="inset-y-0 inset-x-0 z-40" :class="{'hidden' : !collectionOpen, 'fixed': collectionOpen}"></div>
     </header>
+
+    <Cart v-if="cartOpen" @closeCart="cartOpen = false" />
 </template>
 
 <style>
