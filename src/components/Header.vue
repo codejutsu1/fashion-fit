@@ -3,12 +3,14 @@ import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router';
 import Cart from './Cart.vue'
 import Wishlist from './Wishlist.vue'
+import Search from './Search.vue'
 
 const isOpen = ref(false);
 const collectionOpen = ref(false)
 const body = document.querySelector("body"); 
 const cartOpen = ref(false)
 const wishlistOpen = ref(false)
+const searchOpen = ref(false)
 
 const router = useRouter()
 
@@ -54,7 +56,7 @@ function removeCollection() {
                 </ul>
             </nav>
             <div class="hidden lg:flex space-x-5">
-                <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/search.svg" alt="Search Icon">
+                <img @click="searchOpen = true" class="w-full h-full object-fit cursor-pointer" src="/images/icons/search.svg" alt="Search Icon">
                 <img class="w-full h-full object-fit cursor-pointer" src="/images/icons/person.svg" alt="Person Icon">
                 <img @click="cartOpen = true" class="w-full h-full object-fit cursor-pointer" src="/images/icons/cart.svg" alt="Cart Icon">
                 <img @click="wishlistOpen = true" class="w-full h-full object-fit cursor-pointer" src="/images/icons/wishlist.svg" alt="Wishlist Icon">
@@ -231,6 +233,7 @@ function removeCollection() {
 
     <Cart v-if="cartOpen" @closeCart="cartOpen = false" @closeMenu="isOpen = false" />
     <Wishlist v-if="wishlistOpen" @closeWishlist="wishlistOpen = false" @closeMenu="isOpen = false" />
+    <Search v-if="searchOpen" @closeSearch="searchOpen = false" />
 </template>
 
 <style>
