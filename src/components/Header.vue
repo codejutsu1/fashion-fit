@@ -12,6 +12,7 @@ const body = document.querySelector("body");
 const cartOpen = ref(false)
 const wishlistOpen = ref(false)
 const searchOpen = ref(false)
+const mobileCollectionOpen = ref(false)
 
 const router = useRouter()
 
@@ -25,10 +26,14 @@ function collection(){
     return collectionOpen.value ? body.style.overflow = 'hidden' : body.style.overflow = 'auto'
 }
 
-
 function removeCollection() {
     body.style.overflow = 'auto'
     collectionOpen.value = false
+}
+
+function closeMobile() {
+    mobileCollectionOpen.value = false
+    isOpen.value = true
 }
 
 
@@ -89,7 +94,7 @@ function removeCollection() {
                         <li>
                             <RouterLink class="border-b border-[#CAD7DF] px-4 py-3 w-full block" to="/about">About us</RouterLink>
                         </li>
-                        <li class="flex justify-between items-center pr-8 border-b border-[#CAD7DF]">
+                        <li @click="mobileCollectionOpen = true" class="flex justify-between items-center pr-8 border-b border-[#CAD7DF]">
                             <a class=" px-4 py-3 w-full block" href="#">Collections</a>
                             <img src="/images/icons/right.svg" alt="Right">
                         </li>
@@ -235,7 +240,7 @@ function removeCollection() {
     <Cart v-if="cartOpen" @closeCart="cartOpen = false" @closeMenu="isOpen = false" />
     <Wishlist v-if="wishlistOpen" @closeWishlist="wishlistOpen = false" @closeMenu="isOpen = false" />
     <Search v-if="searchOpen" @closeSearch="searchOpen = false" />
-    <CollectionMobile />
+    <CollectionMobile v-if="mobileCollectionOpen" @closeMobileCollection="closeMobile" @closeMenu="mobileCollectionOpen = false" />
 </template>
 
 <style>

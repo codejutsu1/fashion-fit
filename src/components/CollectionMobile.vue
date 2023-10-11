@@ -3,10 +3,10 @@
         <div class="relative">
             <div class="absolute w-full">
                 <div class="flex justify-between py-4 px-6 fixed  w-[70%] bg-[#FFFFFF]">
-                    <img src="/images/icons/back.svg" alt="Back Svg">
-                    <img src="/images/icons/close.svg" alt="Close Svg">
+                    <img @click="$emit('closeMobileCollection')" class="py-2 pr-4" src="/images/icons/back.svg" alt="Back Svg">
+                    <img @click="$emit('closeMenu')" class="py-2 pl-4" src="/images/icons/close.svg" alt="Close Svg">
                 </div>
-                <div class="px-6 pt-16">
+                <div class="px-6 pt-20">
                     <div>
                         <h1 class="text-[#141415] text-base font-semibold">Shop</h1>
                         <ul class="py-3 space-y-2">
