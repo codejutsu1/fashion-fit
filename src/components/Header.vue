@@ -63,7 +63,7 @@ function removeCollection() {
             </div>
             
             <!-- Responsive mobile -->
-            <div class="fixed w-[70%] bg-[#FFFFFF] top-16 right-0 z-40 pb-8 transition ease-in duration-500" v-if="isOpen">
+            <div class="fixed lg:hidden w-[70%] bg-[#FFFFFF] top-16 right-0 z-40 pb-8 transition ease-in duration-500" v-if="isOpen">
                 <!-- <div class="fixed bg-[#D9D9D9] inset-x-0 inset-y-0 overflow-hidden opacity-40"></div> -->
                 <div class="flex justify-between pt-8 px-4">
                     <div class="border flex space-x-3 w-4/5 px-4 res-search-input">
@@ -94,16 +94,16 @@ function removeCollection() {
                     </ul>
                 </nav>
 
-                <div class="px-4 text-[#141415] space-y-3">
-                    <RouterLink to="signin" class="flex items-center space-x-2">
+                <div class="px-4 text-[#141415]">
+                    <RouterLink to="signin" class="flex items-center space-x-2 py-1">
                         <img class="w-7 h-7" src="/images/icons/person.svg" alt="Person">
                         <span>My Account</span>
                     </RouterLink>
-                    <div class="flex items-center space-x-2">
+                    <div class="flex items-center space-x-2 py-1">
                         <img class="w-7 h-7" src="/images/icons/wishlist.svg" alt="Wishlist">
                         <span>My Wishlist</span>
                     </div>
-                    <div class="flex items-center space-x-2">
+                    <div class="flex items-center space-x-2 py-1" @click="cartOpen = true">
                         <img class="w-7 h-7" src="/images/icons/cart.svg" alt="Cart">
                         <span>My Cart</span>
                     </div>
@@ -227,7 +227,7 @@ function removeCollection() {
         <div @click="removeCollection" class="inset-y-0 inset-x-0 z-40" :class="{'hidden' : !collectionOpen, 'fixed': collectionOpen}"></div>
     </header>
 
-    <Cart v-if="cartOpen" @closeCart="cartOpen = false" />
+    <Cart v-if="cartOpen" @closeCart="cartOpen = false" @closeMenu="isOpen = false" />
 </template>
 
 <style>
