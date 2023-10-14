@@ -13,6 +13,7 @@ const cartOpen = ref(false)
 const wishlistOpen = ref(false)
 const searchOpen = ref(false)
 const mobileCollectionOpen = ref(false)
+const animationValue = ref('')
 
 const router = useRouter()
 
@@ -34,6 +35,12 @@ function removeCollection() {
 function closeMobile() {
     mobileCollectionOpen.value = false
     isOpen.value = true
+}
+
+function openFunction (value) {
+    value == 'cart' ? cartOpen.value = true : wishlistOpen.value = true
+
+    window.innerWidth < 1024 ? animationValue.value = 'easeIn' : animationValue.value = 'slideIn'
 }
 
 
@@ -78,14 +85,14 @@ function closeMobile() {
                         </div>
                     </RouterLink>
                 </div>
-                <div @click="cartOpen = true" class="relative w-full px-3 group cursor-pointer">
+                <div @click="openFunction('cart')" class="relative w-full px-3 group cursor-pointer">
                     <img class="w-full h-full object-fit" src="/images/icons/cart.svg" alt="Cart Icon">
                     <div class="bg-[#215373] group-hover:block hidden absolute px-7 mx-2 py-1 -left-4 -bottom-10 z-40">
                         <div class="arrow"></div>
                         <span class="block text-xs text-[#FFFFFF] text-center font-medium">Cart</span>
                     </div>
                 </div>
-                <div @click="wishlistOpen = true" class="relative w-full px-3 group cursor-pointer">
+                <div @click="openFunction('wishlist')" class="relative w-full px-3 group cursor-pointer">
                     <img class="w-full h-full object-fit" src="/images/icons/wishlist.svg" alt="Wishlist Icon">
                     <div class="bg-[#215373] group-hover:block hidden absolute px-6 py-1 -left-4 -bottom-10">
                         <span class="block text-xs text-[#FFFFFF] text-center font-medium">Wishlist</span>
@@ -115,7 +122,7 @@ function closeMobile() {
                         </div>
                     </div>
                     <nav>
-                        <ul class="pt-4 pb-6 text-[#141415]">
+                        <ul class="pt-4 pb-6git a text-[#141415]">
                             <li>
                                 <RouterLink class="border-b border-[#CAD7DF] px-4 py-3 w-full block" to="/">Home</RouterLink>
                             </li>
@@ -137,11 +144,11 @@ function closeMobile() {
                             <img class="w-7 h-7" src="/images/icons/person.svg" alt="Person">
                             <span>My Account</span>
                         </RouterLink>
-                        <div class="flex items-center space-x-2 py-1" @click="wishlistOpen = true">
+                        <div class="flex items-center space-x-2 py-1" @click="openFunction('wishlist')">
                             <img class="w-7 h-7" src="/images/icons/wishlist.svg" alt="Wishlist">
                             <span>My Wishlist</span>
                         </div>
-                        <div class="flex items-center space-x-2 py-1" @click="cartOpen = true">
+                        <div class="flex items-center space-x-2 py-1" @click="openFunction('cart')">
                             <img class="w-7 h-7" src="/images/icons/cart.svg" alt="Cart">
                             <span>My Cart</span>
                         </div>
@@ -266,13 +273,22 @@ function closeMobile() {
         <div @click="removeCollection" class="inset-y-0 inset-x-0 z-40" :class="{'hidden' : !collectionOpen, 'fixed': collectionOpen}"></div>
     </header>
 
-    <Cart v-if="cartOpen" @closeCart="cartOpen = false" @closeMenu="isOpen = false" />
-    <Wishlist v-if="wishlistOpen" @closeWishlist="wishlistOpen = false" @closeMenu="isOpen = false" />
+    <Transition :name="animationValue">
+        <Cart v-if="cartOpen" @closeCart="cartOpen = false" @closeMenu="isOpen = false" />
+    </Transition>
+
+    <Transition :name="animationValue">
+        <Wishlist v-if="wishlistOpen" @closeWishlist="wishlistOpen = false" @closeMenu="isOpen = false" />
+    </Transition>
+    
+
     <Search v-if="searchOpen" @closeSearch="searchOpen = false" />
-    <CollectionMobile v-if="mobileCollectionOpen" @closeMobileCollection="closeMobile" @closeMenu="mobileCollectionOpen = false" />
+    <Transition name="collection">
+        <CollectionMobile v-if="mobileCollectionOpen" @closeMobileCollection="closeMobile" @closeMenu="mobileCollectionOpen = false" />
+    </Transition>
 </template>
 
-<style>
+<style scoped>
 .header-shadow{
     box-shadow: 0px 2px 12px 0px #1414150F;
 }
@@ -313,5 +329,57 @@ function closeMobile() {
     to {
       translate: 300px 0;
     }
+   }   
+
+   /* .collection-enter-active {
+    animation: collectionSlideIn 1s;
+   }
+
+   @keyframes collectionSlideIn {
+    0% {
+      translate: 400px 0;
+    }
+    50% {
+      translate: -15px 0;
+    }
+    100% {
+        translate: 0 0;
+    }
+  } */
+
+.easeIn-enter-active,
+.easeIn-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+  .easeIn-enter-from,
+.easeIn-leave-to {
+  opacity: 0;
+}
+
+.slideIn-enter-active {
+    animation: slideIn 0.5s;
   }
+
+  @keyframes slideIn {
+    0% {
+      translate: 500px 0;
+    }
+    100% {
+        translate: 0 0;
+    }
+  }
+  .slideIn-leave-active {
+    animation: slideOut 0.5s;
+  }
+  @keyframes slideOut {
+    from {
+      translate: 0 0;
+      /* Opacity makes the transition fade in.  */
+      /* opacity: 1; */
+    }
+    to {
+      translate: 500px 0;
+    }
+   }  
 </style>

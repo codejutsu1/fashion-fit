@@ -1,8 +1,11 @@
-<template>
-    <div class="fixed lg:hidden w-[70%] overflow-y-scroll h-3/5 bg-[#FFFFFF] top-24 border-2 right-0 z-40 pb-8 transition ease-in duration-500">
+<script setup>
+
+</script>
+<template> 
+    <div class="fixed lg:hidden w-[70%] overflow-y-scroll overflow-x-hidden h-3/5 bg-[#FFFFFF] top-24 border-2 right-0 z-40 pb-8">
         <div class="relative">
             <div class="absolute w-full">
-                <div class="flex justify-between py-4 px-6 fixed  w-[70%] bg-[#FFFFFF]">
+                <div class="flex justify-between py-4 px-6 fixed w-[70%] bg-[#FFFFFF]">
                     <img @click="$emit('closeMobileCollection')" class="py-2 pr-4" src="/images/icons/back.svg" alt="Back Svg">
                     <img @click="$emit('closeMenu')" class="py-2 pl-4" src="/images/icons/close.svg" alt="Close Svg">
                 </div>
