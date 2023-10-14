@@ -2,7 +2,7 @@
 
 </script>
 <template> 
-    <div class="fixed lg:hidden w-[70%] overflow-y-scroll overflow-x-hidden h-3/5 bg-[#FFFFFF] top-24 border-2 right-0 z-40 pb-8">
+    <div class="fixed w-[70%] overflow-y-scroll overflow-x-hidden h-3/5 bg-[#FFFFFF] top-16 border-2 right-5 z-40 pb-8">
         <div class="relative">
             <div class="absolute w-full">
                 <div class="flex justify-between py-4 px-6 fixed w-[70%] bg-[#FFFFFF]">

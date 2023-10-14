@@ -31,6 +31,11 @@ function removeCollection() {
     collectionOpen.value = false
 }
 
+function openMobileCollection() {
+    mobileCollectionOpen.value = true
+    isOpen.value = false
+}
+
 function closeMobile() {
     mobileCollectionOpen.value = false
     isOpen.value = true
@@ -128,8 +133,8 @@ function openFunction (value) {
                             <li>
                                 <RouterLink class="border-b border-[#CAD7DF] px-4 py-3 w-full block" to="/about">About us</RouterLink>
                             </li>
-                            <li @click="mobileCollectionOpen = true" class="flex justify-between items-center pr-4 border-b border-[#CAD7DF]">
-                                <a class=" px-4 py-3 w-full block" href="#">Collections</a>
+                            <li @click="openMobileCollection" class="flex justify-between items-center pr-4 border-b border-[#CAD7DF]">
+                                <button type="button" class="text-left px-4 py-3 w-full block">Collections</button>
                                 <img src="/images/icons/right.svg" alt="Right">
                             </li>
                             <li>
@@ -330,8 +335,8 @@ function openFunction (value) {
       translate: 300px 0;
     }
    }   
-
-   /* .collection-enter-active {
+/* Collection */
+   .collection-enter-active {
     animation: collectionSlideIn 1s;
    }
 
@@ -340,12 +345,26 @@ function openFunction (value) {
       translate: 400px 0;
     }
     50% {
-      translate: -15px 0;
+      translate: -10px 0;
     }
     100% {
         translate: 0 0;
     }
-  } */
+  }
+
+  .collection-leave-active {
+    animation: slideOut 0.5s;
+  }
+  @keyframes slideOut {
+    from {
+      translate: 0 0;
+      /* Opacity makes the transition fade in.  */
+      /* opacity: 1; */
+    }
+    to {
+      translate: 500px 0;
+    }
+   }  
 
   /* For the cart and wishlist when responsive */
 .easeIn-enter-active, .easeIn-leave-active {
