@@ -18,8 +18,7 @@ const animationValue = ref('')
 const router = useRouter()
 
 router.beforeEach(() => {
-    isOpen.value = false
-    collectionOpen.value = false
+    isOpen.value = collectionOpen.value = false
 })
 
 function collection(){
@@ -280,9 +279,10 @@ function openFunction (value) {
     <Transition :name="animationValue">
         <Wishlist v-if="wishlistOpen" @closeWishlist="wishlistOpen = false" @closeMenu="isOpen = false" />
     </Transition>
-    
 
-    <Search v-if="searchOpen" @closeSearch="searchOpen = false" />
+    <Transition name="search">
+        <Search v-if="searchOpen" @closeSearch="searchOpen = false" />
+    </Transition>
     <Transition name="collection">
         <CollectionMobile v-if="mobileCollectionOpen" @closeMobileCollection="closeMobile" @closeMenu="mobileCollectionOpen = false" />
     </Transition>
@@ -347,8 +347,8 @@ function openFunction (value) {
     }
   } */
 
-.easeIn-enter-active,
-.easeIn-leave-active {
+  /* For the cart and wishlist when responsive */
+.easeIn-enter-active, .easeIn-leave-active {
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -357,11 +357,12 @@ function openFunction (value) {
   opacity: 0;
 }
 
+/* For the cart and wishlist when on large screen */
 .slideIn-enter-active {
-    animation: slideIn 0.5s;
+    animation: slideInn 0.5s;
   }
 
-  @keyframes slideIn {
+  @keyframes slideInn {
     0% {
       translate: 500px 0;
     }
@@ -370,9 +371,9 @@ function openFunction (value) {
     }
   }
   .slideIn-leave-active {
-    animation: slideOut 0.5s;
+    animation: slideOutt 0.5s;
   }
-  @keyframes slideOut {
+  @keyframes slideOutt {
     from {
       translate: 0 0;
       /* Opacity makes the transition fade in.  */
@@ -382,4 +383,31 @@ function openFunction (value) {
       translate: 500px 0;
     }
    }  
+
+   /* For the search component */
+   .search-enter-active {
+    animation: slideDown 0.5s;
+   }
+   
+   @keyframes slideDown {
+    from{
+        translate: 0 -500px;
+    }
+    to {
+        translate: 0 0;
+    }
+   }
+
+   .search-leave-active {
+    animation: slideUp 0.5s;
+   }
+   
+   @keyframes slideUp {
+    from{
+        translate: 0 0;
+    }
+    to {
+        translate: 0 -500px;
+    }
+   }
 </style>
