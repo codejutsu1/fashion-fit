@@ -2,10 +2,11 @@
 import { ref } from 'vue'
 
 const options = {
-  type:"loop",
+  type:"slide",
   perPage:3, 
   perMove:1, 
   gap : "30px", 
+  rewind: true,
   autoplay : true, 
   interval: 2500,
   pauseOnFocus : false,
@@ -16,25 +17,71 @@ const options = {
       },
     }
 }
-
-const image = ref()
-
+ 
+const img = ref([])
+const imageloop = ref()
 const images = ref([
-  "/images/best-sellers/best-seller-1.jpg",
-  "/images/best-sellers/best-seller-2.jpg",
-  "/images/best-sellers/best-seller-3.jpg",
+  [
+    '/images/best-sellers/best-seller-1.jpg',
+    '/images/best-sellers/best-seller-2.jpg',
+    '/images/best-sellers/best-seller-3.jpg',
+    '/images/best-sellers/best-seller-4.jpg', 
+  ],
+  [
+    '/images/best-sellers/best-seller-2.jpg',
+    '/images/best-sellers/best-seller-5.jpg',
+    '/images/best-sellers/best-seller-6.jpg',
+    '/images/best-sellers/best-seller-7.jpg',
+  ],
+  [
+    '/images/best-sellers/best-seller-3.jpg',
+    'imesad44'
+  ],
+  [
+    '/images/best-sellers/best-seller-4.jpg',
+    'images56'
+  ],
+  [
+    '/images/best-sellers/best-seller-5.jpg',
+    'images56'
+  ],
+  [
+    '/images/best-sellers/best-seller-6.jpg',
+    'images56'
+  ],
+  [
+    '/images/best-sellers/best-seller-7.jpg',
+    'images56'
+  ],
+  [
+    '/images/best-sellers/best-seller-2.jpg',
+    'images56'
+  ],
+  [
+    '/images/best-sellers/best-seller-8.jpg',
+    'images56'
+  ],
+  [
+    '/images/best-sellers/best-seller-9.jpg',
+    'images56'
+  ],
 ])
 
-function hoverImages() 
+function hoverImages(pos) 
 {
-  images.value.forEach((item, index) => {
+  // console.log(pos)
+  images.value[pos].slice(1).forEach((item, index) => {
    
+   imageloop.value = setTimeout(() => {
+    document.getElementById('img-hover'+(pos+1)).src = item
+   }, 1500 * (index))
   })
 }
 
-function originalImage()
+function leaveImage(pos)
 {
-  console.log('mouse leave')
+  clearTimeout(imageloop.value)
+  document.getElementById('img-hover'+(pos+1)).src = images.value[pos][0]
 }
 </script>
 <template>
@@ -46,8 +93,8 @@ function originalImage()
           </div>
           <div class="w-full splide__list">
             <div class="overflow-x-hidden best-seller-grid splide__slide">
-              <div class="relative hover" @mouseenter="hoverImages" @mouseleave="originalImage">
-                <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-1.jpg" alt="Jean Jacket">
+              <div class="relative" @mouseenter="hoverImages(0)" @mouseleave="leaveImage(0)">
+                <img class="w-full h-full object-fit" id="img-hover1" :src="images[0][0]" alt="Corset Midi Dress">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -67,8 +114,8 @@ function originalImage()
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative">
-                <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-2.jpg" alt="Jean Jacket">
+              <div class="relative img-hover" @mouseenter="hoverImages(1)" @mouseleave="leaveImage(1)">
+                <img class="w-full h-full object-fit" id="img-hover2" :src="images[1][0]" alt="Textured Shorts">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -88,8 +135,8 @@ function originalImage()
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid  splide__slide">
-              <div class="relative">
-                <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-3.jpg" alt="Jean Jacket">
+              <div class="relative img-hover">
+                <img class="w-full h-full object-fit" :src="images[2][0]" alt="White Sneakers">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -109,8 +156,8 @@ function originalImage()
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative">
-                <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-4.jpg" alt="Jean Jacket">
+              <div class="relative img-hover">
+                <img class="w-full h-full object-fit" :src="images[3][0]" alt="Drawstring Top">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -130,8 +177,8 @@ function originalImage()
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative">
-                <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-5.jpg" alt="Jean Jacket">
+              <div class="relative img-hover">
+                <img class="w-full h-full object-fit" :src="images[4][0]" alt="Rhinestone Choker">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -151,8 +198,8 @@ function originalImage()
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative">
-                <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-6.jpg" alt="Jean Jacket">
+              <div class="relative img-hover">
+                <img class="w-full h-full object-fit" :src="images[5][0]" alt="Flare Skirt">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -172,8 +219,8 @@ function originalImage()
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative">
-                <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-7.jpg" alt="Jean Jacket">
+              <div class="relative img-hover">
+                <img class="w-full h-full object-fit" :src="images[6][0]" alt="Cut out Top">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -193,8 +240,8 @@ function originalImage()
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative">
-                <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-8.jpg" alt="Jean Jacket">
+              <div class="relative img-hover">
+                <img class="w-full h-full object-fit" :src="images[7][0]" alt="Kicks">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -214,8 +261,8 @@ function originalImage()
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative">
-                <img class="w-full h-full object-fit" src="/images/best-sellers/best-seller-9.jpg" alt="Jean Jacket">
+              <div class="relative img-hover">
+                <img class="w-full h-full object-fit" :src="images[8][0]" alt="Kicks">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
