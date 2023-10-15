@@ -22,36 +22,30 @@ const img = ref([])
 const imageloop = ref()
 const images = ref([
   [
+    '/images/best-sellers/best-seller-11.jpg',
     '/images/best-sellers/best-seller-1.jpg',
+  ],
+  [
+    '/images/best-sellers/best-seller-21.jpg',
     '/images/best-sellers/best-seller-2.jpg',
+  ],
+  [
+    '/images/best-sellers/best-seller-31.jpg',
     '/images/best-sellers/best-seller-3.jpg',
-    '/images/best-sellers/best-seller-4.jpg', 
   ],
   [
-    '/images/best-sellers/best-seller-2.jpg',
-    '/images/best-sellers/best-seller-5.jpg',
-    '/images/best-sellers/best-seller-6.jpg',
-    '/images/best-sellers/best-seller-7.jpg',
-  ],
-  [
-    '/images/best-sellers/best-seller-3.jpg',
-    'imesad44'
-  ],
-  [
+  '/images/best-sellers/best-seller-41.jpg',
+  '/images/best-sellers/best-seller-42.jpg',
     '/images/best-sellers/best-seller-4.jpg',
-    'images56'
   ],
   [
     '/images/best-sellers/best-seller-5.jpg',
-    'images56'
   ],
   [
     '/images/best-sellers/best-seller-6.jpg',
-    'images56'
   ],
   [
     '/images/best-sellers/best-seller-7.jpg',
-    'images56'
   ],
   [
     '/images/best-sellers/best-seller-2.jpg',
@@ -59,21 +53,18 @@ const images = ref([
   ],
   [
     '/images/best-sellers/best-seller-8.jpg',
-    'images56'
   ],
   [
     '/images/best-sellers/best-seller-9.jpg',
-    'images56'
   ],
 ])
 
 function hoverImages(pos) 
 {
-  // console.log(pos)
-  images.value[pos].slice(1).forEach((item, index) => {
+  images.value[pos].forEach((item, index) => {
    
    imageloop.value = setTimeout(() => {
-    document.getElementById('img-hover'+(pos+1)).src = item
+    document.getElementById('img-hover'+ (pos+1)).src = item
    }, 1500 * (index))
   })
 }
@@ -81,7 +72,7 @@ function hoverImages(pos)
 function leaveImage(pos)
 {
   clearTimeout(imageloop.value)
-  document.getElementById('img-hover'+(pos+1)).src = images.value[pos][0]
+  document.getElementById('img-hover'+ (pos+1)).src = images.value[pos][images.value[pos].length - 1]
 }
 </script>
 <template>
@@ -94,7 +85,7 @@ function leaveImage(pos)
           <div class="w-full splide__list">
             <div class="overflow-x-hidden best-seller-grid splide__slide">
               <div class="relative" @mouseenter="hoverImages(0)" @mouseleave="leaveImage(0)">
-                <img class="w-full h-full object-fit" id="img-hover1" :src="images[0][0]" alt="Corset Midi Dress">
+                <img class="w-full h-full object-fit cursor-pointer" id="img-hover1" :src="images[0][1]" alt="Corset Midi Dress">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -115,7 +106,7 @@ function leaveImage(pos)
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
               <div class="relative img-hover" @mouseenter="hoverImages(1)" @mouseleave="leaveImage(1)">
-                <img class="w-full h-full object-fit" id="img-hover2" :src="images[1][0]" alt="Textured Shorts">
+                <img class="w-full h-full object-fit" id="img-hover2" :src="images[1][1]" alt="Textured Shorts">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
