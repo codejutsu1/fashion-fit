@@ -39,22 +39,28 @@ const images = ref([
     '/images/best-sellers/best-seller-4.jpg',
   ],
   [
+    
+    '/images/best-sellers/best-seller-51.jpg',
     '/images/best-sellers/best-seller-5.jpg',
   ],
   [
+    
+    '/images/best-sellers/best-seller-61.jpg',
     '/images/best-sellers/best-seller-6.jpg',
   ],
   [
+    
+    '/images/best-sellers/best-seller-71.jpg',
     '/images/best-sellers/best-seller-7.jpg',
   ],
   [
-    '/images/best-sellers/best-seller-2.jpg',
-    'images56'
-  ],
-  [
+    
+    '/images/best-sellers/best-seller-81.jpg',
     '/images/best-sellers/best-seller-8.jpg',
   ],
   [
+    
+    '/images/best-sellers/best-seller-91.jpg',
     '/images/best-sellers/best-seller-9.jpg',
   ],
 ])
@@ -105,7 +111,7 @@ function leaveImage(pos)
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative img-hover" @mouseenter="hoverImages(1)" @mouseleave="leaveImage(1)">
+              <div class="relative" @mouseenter="hoverImages(1)" @mouseleave="leaveImage(1)">
                 <img class="w-full h-full object-fit" id="img-hover2" :src="images[1][1]" alt="Textured Shorts">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
@@ -126,8 +132,8 @@ function leaveImage(pos)
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid  splide__slide">
-              <div class="relative img-hover">
-                <img class="w-full h-full object-fit" :src="images[2][0]" alt="White Sneakers">
+              <div class="relative" @mouseenter="hoverImages(2)" @mouseleave="leaveImage(2)">
+                <img class="w-full h-full object-fit" id="img-hover3" :src="images[2][1]" alt="White Sneakers">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -147,8 +153,8 @@ function leaveImage(pos)
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative img-hover">
-                <img class="w-full h-full object-fit" :src="images[3][0]" alt="Drawstring Top">
+              <div class="relative" @mouseenter="hoverImages(3)" @mouseleave="leaveImage(3)">
+                <img class="w-full h-full object-fit" id="img-hover4" :src="images[3][2]" alt="Drawstring Top">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -168,8 +174,8 @@ function leaveImage(pos)
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative img-hover">
-                <img class="w-full h-full object-fit" :src="images[4][0]" alt="Rhinestone Choker">
+              <div class="relative" @mouseenter="hoverImages(4)" @mouseleave="leaveImage(4)">
+                <img class="w-full h-full object-fit" id="img-hover5" :src="images[4][1]" alt="Rhinestone Choker">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -189,8 +195,8 @@ function leaveImage(pos)
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative img-hover">
-                <img class="w-full h-full object-fit" :src="images[5][0]" alt="Flare Skirt">
+              <div class="relative" @mouseenter="hoverImages(5)" @mouseleave="leaveImage(5)">
+                <img class="w-full h-full object-fit" id="img-hover6" :src="images[5][1]" alt="Flare Skirt">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -210,8 +216,8 @@ function leaveImage(pos)
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative img-hover">
-                <img class="w-full h-full object-fit" :src="images[6][0]" alt="Cut out Top">
+              <div class="relative" @mouseenter="hoverImages(6)" @mouseleave="leaveImage(6)">
+                <img class="w-full h-full object-fit" id="img-hover7" :src="images[6][1]" alt="Cut out Top">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -231,8 +237,8 @@ function leaveImage(pos)
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative img-hover">
-                <img class="w-full h-full object-fit" :src="images[7][0]" alt="Kicks">
+              <div class="relative" @mouseenter="hoverImages(7)" @mouseleave="leaveImage(7)">
+                <img class="w-full h-full object-fit" id="img-hover8" :src="images[7][1]" alt="Kicks">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
@@ -252,8 +258,8 @@ function leaveImage(pos)
             </div>
 
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
-              <div class="relative img-hover">
-                <img class="w-full h-full object-fit" :src="images[8][0]" alt="Kicks">
+              <div class="relative" @mouseenter="hoverImages(8)" @mouseleave="leaveImage(8)">
+                <img class="w-full h-full object-fit" id="img-hover9" :src="images[8][1]" alt="Kicks">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
                   <img src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
