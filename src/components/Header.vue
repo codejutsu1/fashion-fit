@@ -52,11 +52,11 @@ function openFunction (value) {
 
 <template>
     <header class="w-full fixed z-40 bg-white header-shadow">
-        <div class="relative w-5/6 mx-auto flex items-center justify-between py-8">
-            <div >
+        <div class="relative w-11/12 mx-auto flex items-center justify-between py-8">
+            <div class="w-1/3 flex pl-14">
                 <img src="/images/logo/logo.svg" alt="Fashion Fit Logo">
             </div>
-            <nav>
+            <nav class="w-2/5">
                 <ul class="hidden lg:flex space-x-16 font-normal text relative z-50">
                     <li>
                         <RouterLink  to="/">Home</RouterLink>
