@@ -4,7 +4,7 @@ import Reviews from '../components/Reviews.vue'
 </script>
 <template>
   <main class="overflow-hidden pt-28">
-    <section class="bg-about bg-center bg-cover py-10 lg:py-14">
+    <section class="bg-about bg-center bg-no-repeat py-36 lg:py-10">
       <div class="lg:w-1/2 mx-auto lg:py-14 flex items-center justify-center px-5 lg:px-1">
         <div class="relative text-center">
           <h1  data-aos="fade-down-right" data-aos-duration="700" data-aos-delay="0" class="text-2xl lg:text-5xl font-semibold lg:leading-[64.8px] text-[#FFFFFF]">
@@ -20,14 +20,15 @@ import Reviews from '../components/Reviews.vue'
     </section>
 
     <section class="py-14">
-      <div class="w-5/6 mx-auto">
-        <div class="relative py-10 space-y-5 lg:space-y-0">
-          <div class="mx-4 lg:ml-32">
-            <img class="z-30 relative" src="/images/pictures/picture-3.jpg" alt="Cute Couples">
-          </div>
-          <div class="lg:flex justify-end bg-[#F1E0D2] lg:absolute lg:top-[15%] py-10 lg:py-32">
-            <div class="lg:w-1/2">
-              <div class="lg:w-[65%] px-4 lg:px-0 mx-auto text-[#141415]">
+      <div class="w-11/12 mx-auto">
+        <div class="grid">
+          <div class=" bg-[#F1E0D2] grid-area items-center my-20 lg:block hidden"></div>
+          <div class="grid-area lg:flex justify-center">
+            <div class="px-5">
+              <img class="z-30" src="/images/pictures/picture-3.jpg" alt="Cute Couples">
+            </div>
+            <div class="lg:w-2/5 lg:bg-transparent bg-[#F1E0D2] mt-7 lg:mt-8 lg:px-12 flex items-center">
+              <div class="w-full px-4 py-6 lg:py-0 lg:px-0 text-[#141415]">
                 <h1 class="text-2xl lg:text-4xl font-semibold">Read our Story</h1>
                 <span class="py-3 block text-base lg:text-2xl">How did we start?</span>
                 <p class="font-normal text-sm lg:text-base">
@@ -111,3 +112,8 @@ import Reviews from '../components/Reviews.vue'
   </main>
 </template>
 
+<style scoped>
+.grid-area{
+  grid-area: 1 / -1;
+}
+</style>
