@@ -46,7 +46,7 @@ import Reviews from '../components/Reviews.vue'
         <h1 class="text-center text-2xl lg:text-4xl font-semibold">Our Values</h1>
         <p class="text-center text-base lg:text-2xl py-2">What do we cherish?</p>
         <div class="lg:w-3/5 w-5/6 mx-auto pt-10">
-          <div class="lg:grid grid-cols-2 justify-between space-y-4 lg:space-x-5">
+          <div class="lg:grid grid-cols-2 justify-between space-y-4 lg:space-y-0 lg:space-x-5">
             <div class="lg:flex justify-between">
               <div class="lg:w-4/5 justify-center lg:justify-end flex items-start">
                 <img src="/images/icons/high-quality.svg" alt="High Quality">
