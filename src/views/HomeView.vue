@@ -29,7 +29,7 @@ import NewCollection from '../components/NewCollection.vue'
 
     <section class="py-14">
       <div class="w-5/6 mx-auto lg:flex justify-between">
-        <div>
+        <div class="lg:w-[70%] w-auto">
           <img class="w-full h-full object-fit" src="/images/pictures/picture-2.jpg" alt="A young woman smiling holding a bottle.">
         </div>
         <div class="flex items-center justify-center pt-4 lg:pt-0">
@@ -194,7 +194,7 @@ import NewCollection from '../components/NewCollection.vue'
   } 
 }
 
-.fade-in {
+/* .fade-in {
   animation: fade-in 50ms;
 }
 
@@ -208,5 +208,5 @@ import NewCollection from '../components/NewCollection.vue'
   100% {
     opacity: 1;
   }
-}
+} */
 </style>

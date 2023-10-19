@@ -143,7 +143,7 @@ import Reviews from '../components/Reviews.vue'
   }
 }
 
-.fade-in {
+/* .fade-in {
   animation: fade-in 50ms;
 }
 
@@ -157,5 +157,5 @@ import Reviews from '../components/Reviews.vue'
   100% {
     opacity: 1;
   }
-}
+} */
 </style>

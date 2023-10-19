@@ -19,6 +19,7 @@ const router = useRouter()
 
 router.beforeEach(() => {
     isOpen.value = collectionOpen.value = false
+    body.style.overflow = 'auto'
 })
 
 function collection(){

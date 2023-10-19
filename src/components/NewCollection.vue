@@ -21,10 +21,10 @@ const options = {
       <Splide :has-track="false" :options="options" aria-label="New Collection">
         <div class="w-11/12 mx-auto text-[#141415] splide__track">
           <h1 class="font-semibold text-2xl lg:text-4xl lg:leading-[50px]">New Collection!</h1>
-          <p class="text-base lg:text-2xl">Our collections are elegant and of the best quality</p>
+          <p class="text-base lg:text-2xl pb-14">Our collections are elegant and of the best quality</p>
 
-          <div class="sm:!grid grid-cols-3 sm:gap-8 pt-16 w-full splide__list">
-            <div class="w-full overflow-x-hidden splide__slide">
+          <div class="sm:!grid grid-cols-3 sm:gap-8  w-full splide__list">
+            <div class="w-full overflow-x-hidden splide__slide border border-[#CAD7DF]">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-1.jpg" alt="Jean Jacket">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
@@ -37,7 +37,7 @@ const options = {
               </div>
             </div>    
 
-            <div class="overflow-x-hidden splide__slide">
+            <div class="overflow-x-hidden splide__slide border border-[#CAD7DF]">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-2.jpg" alt="Jean Jacket">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
@@ -50,7 +50,7 @@ const options = {
               </div>
             </div> 
 
-            <div class="w-full overflow-hidden splide__slide">
+            <div class="w-full overflow-hidden splide__slide border border-[#CAD7DF]">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-3.jpg" alt="Jean Jacket">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
@@ -63,7 +63,7 @@ const options = {
               </div>
             </div> 
 
-            <div class="w-full overflow-hidden splide__slide">
+            <div class="w-full overflow-hidden splide__slide border border-[#CAD7DF]">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-4.jpg" alt="Jean Jacket">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
@@ -76,7 +76,7 @@ const options = {
               </div>
             </div> 
 
-            <div class="w-full overflow-hidden splide__slide">
+            <div class="w-full overflow-hidden splide__slide border border-[#CAD7DF]">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-5.jpg" alt="Jean Jacket">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
@@ -89,7 +89,7 @@ const options = {
               </div>
             </div> 
 
-            <div class="w-full overflow-hidden splide__slide">
+            <div class="w-full overflow-hidden splide__slide border border-[#CAD7DF]">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-6.jpg" alt="Jean Jacket">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
