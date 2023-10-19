@@ -4,15 +4,15 @@ import Reviews from '../components/Reviews.vue'
 </script>
 <template>
   <main class="overflow-hidden pt-28">
-    <section class="bg-about bg-center bg-no-repeat py-36 lg:py-10">
+    <section class="bg-about bg-center bg-no-repeat py-36 lg:py-10 fade-in">
       <div class="lg:w-1/2 mx-auto lg:py-14 flex items-center justify-center px-5 lg:px-1">
         <div class="relative text-center">
-          <h1  data-aos="fade-down-right" data-aos-duration="700" data-aos-delay="0" class="text-2xl lg:text-5xl font-semibold lg:leading-[64.8px] text-[#FFFFFF]">
+          <h1 class="text-2xl lg:text-5xl font-semibold lg:leading-[64.8px] text-[#FFFFFF] right-animation">
             How did FASHION FIT become a huge success
           </h1>
           <Transition></Transition>
-          <p data-aos="fade-down-right" data-aos-duration="700" class="text-[#FFFFFF] text-base lg:text-2xl py-2">Get inspired as you read about us</p>
-          <button data-aos="fade-down-left" data-aos-duration="700" class="bg-[#307098] py-3 px-14 mt-10 font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
+          <p class="text-[#FFFFFF] text-base lg:text-2xl py-2 right-animation">Get inspired as you read about us</p>
+          <button class="bg-[#307098] py-3 px-14 mt-10 font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373] left-animation">
             Shop Now
           </button>
         </div>
@@ -115,5 +115,47 @@ import Reviews from '../components/Reviews.vue'
 <style scoped>
 .grid-area{
   grid-area: 1 / -1;
+}
+
+.right-animation {
+  animation: slide-down-right 500ms;
+}
+
+@keyframes slide-down-right {
+  from {
+    transform: translate3d(-40px, -30px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.left-animation {
+  animation: slide-down-left 500ms;
+}
+
+@keyframes slide-down-left {
+  from {
+    transform: translate3d(0px, -60px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fade-in {
+  animation: fade-in 50ms;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>

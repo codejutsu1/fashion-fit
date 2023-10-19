@@ -8,19 +8,19 @@ import NewCollection from '../components/NewCollection.vue'
   <main class="overflow-x-hidden pt-28">
     <section class="lg:pt-12 pt-3 pb-10 w-full lg:w-5/6 mx-auto">
       <div class="relative text-center text-[#141415]">
-        <h1 class="text-4xl lg:text-6xl font-bold lg:leading-[89.6px] px-8" data-aos="fade-up-left" data-aos-duration="700">Find your <span class="text-[#FFCC4D]">style</span> in our collection</h1>
+        <h1 class="text-4xl lg:text-6xl font-bold lg:leading-[89.6px] px-8 left">Find your <span class="text-[#FFCC4D]">style</span> in our collection</h1>
         <div class="text-center w-4/5 lg:w-3/5 px-1 mx-auto pt-2 lg:pt-0">
-          <p data-aos="fade-up-left" data-aos-duration="700" class="text-base lg:text-2xl lg:leading-9">Fashion is a way of life. Experience fashion at its best as you shop from our collections </p>
+          <p class="text-base lg:text-2xl lg:leading-9 left">Fashion is a way of life. Experience fashion at its best as you shop from our collections </p>
         </div>
         <Transition ></Transition>
-        <button data-aos="fade-up-right" data-aos-duration="700" class="bg-[#307098] py-3 px-14 mt-10 font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
+        <button class="bg-[#307098] py-3 px-14 mt-10 font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373] right">
           Shop Now
         </button>
       </div>
       <div class="pt-10">
         <div class="relative">
-          <img class="md:block hidden w-full h-full object-fit" src="/images/pictures/picture-1.jpg" alt="Landing page Image">
-          <img class="md:hidden w-full h-full object-fit" src="/images/pictures/picture-1-res.jpg" alt="Landing page Image">
+          <img class="md:block hidden w-full h-full object-fit fade-in" src="/images/pictures/picture-1.jpg" alt="Landing page Image">
+          <img class="md:hidden w-full h-full object-fit fade-in" src="/images/pictures/picture-1-res.jpg" alt="Landing page Image">
         </div>
       </div>
     </section>
@@ -166,3 +166,47 @@ import NewCollection from '../components/NewCollection.vue'
     </section>
   </main>
 </template>
+
+<style scoped>
+.left{
+  animation: slide-up-left 500ms;
+}
+
+@keyframes slide-up-left {
+  from {
+    transform: translate3d(60px, 80px, 0);
+  }
+  to {
+    transform: translate3d(0,0,0);
+  } 
+}
+
+.right {
+  animation: slide-down-right 500ms;
+}
+
+@keyframes slide-down-right {
+  from {
+    transform: translate3d(-40px, 50px, 0);
+  }
+  to {
+    transform: translate3d(0,0,0);
+  } 
+}
+
+.fade-in {
+  animation: fade-in 50ms;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+</style>
