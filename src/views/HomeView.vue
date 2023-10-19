@@ -13,7 +13,7 @@ import NewCollection from '../components/NewCollection.vue'
           <p class="text-base lg:text-2xl lg:leading-9 left">Fashion is a way of life. Experience fashion at its best as you shop from our collections </p>
         </div>
         <Transition ></Transition>
-        <button class="bg-[#307098] py-3 px-14 mt-10 font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373] right">
+        <button class="bg-[#307098] py-3 px-14 mt-5 lg:mt-10 font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373] right">
           Shop Now
         </button>
       </div>
