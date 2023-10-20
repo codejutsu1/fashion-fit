@@ -8,9 +8,9 @@ import CollectionMobile from './CollectionMobile.vue'
 
 const isOpen = ref(false);
 const collectionOpen = ref(false)
-const body = document.querySelector("body"); 
 const cartOpen = ref(false)
 const wishlistOpen = ref(false)
+const body = document.querySelector("body")
 const searchOpen = ref(false)
 const mobileCollectionOpen = ref(false)
 const animationValue = ref('')
@@ -24,7 +24,7 @@ router.beforeEach(() => {
 
 function collection(){
     collectionOpen.value = !collectionOpen.value
-    return collectionOpen.value ? body.style.overflow = 'hidden' : body.style.overflow = 'auto'
+     return collectionOpen.value ? body.style.overflow = 'hidden' : body.style.overflow = 'auto'
 }
 
 function removeCollection() {
@@ -52,7 +52,7 @@ function openFunction (value) {
 </script>
 
 <template>
-    <header class="w-full fixed z-40 bg-white header-shadow">
+    <header class="w-full fixed z-[60] bg-white header-shadow">
         <div class="relative w-11/12 mx-auto flex items-center justify-between py-8">
             <div class="lg:w-1/3 flex lg:pl-14">
                 <img src="/images/logo/logo.svg" alt="Fashion Fit Logo">
@@ -162,7 +162,8 @@ function openFunction (value) {
             </Transition>
 
             <!-- Collection Menu -->
-            <div class="absolute w-full bg-[#FFFFFF] -bottom-80 z-50" :class="{'hidden' : !collectionOpen, 'block': collectionOpen}">
+            <div class="bg-black opacity-[15%] fixed inset-x-0 inset-y-0 z-[60]" @click="removeCollection()" :class="{'hidden' : !collectionOpen, 'block': collectionOpen}"></div>
+            <div class="absolute w-full bg-[#FFFFFF] -bottom-80 z-[65]" :class="{'hidden' : !collectionOpen, 'block': collectionOpen}">
                 <div class="flex justify-between mx-auto py-10 px-28">
                     <div>
                         <h1 class="text-[#141415] text-xl font-semibold">Shop</h1>
@@ -274,8 +275,6 @@ function openFunction (value) {
                 </div>
             </div>
         </div>
-
-        <div @click="removeCollection" class="inset-y-0 inset-x-0 z-40" :class="{'hidden' : !collectionOpen, 'fixed': collectionOpen}"></div>
     </header>
 
     <Transition :name="animationValue">
