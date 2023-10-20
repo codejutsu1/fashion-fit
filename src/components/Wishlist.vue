@@ -13,7 +13,7 @@ function backPage(){
                 <div>
                     <img @click="$emit('closeWishlist')" src="/images/icons/back.svg" alt="Back" class="cursor-pointer block lg:hidden">  
                 </div>  
-                <h1 class="font-semibold text-xl lg:text-3xl py-5 text-center bordr">Wishlist</h1>
+                <h1 class="font-semibold text-xl lg:text-3xl py-5 text-center">Wishlist</h1>
 
                 <div class="flex justify-end">
                     <img @click="backPage" src="/images/icons/close.svg" alt="Close" class="cursor-pointer block lg:absolute top-5 right-8 p-4 pr-0">
