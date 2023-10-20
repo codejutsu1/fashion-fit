@@ -42,7 +42,7 @@ function togglePassword()
                 </div>
                 <div class="w-11/12 lg:w-4/5 mx-auto pt-4 flex items-center space-x-2">
                     <input type="checkbox" class="w-6 h-6 text-[#141415] border border-[#141415]">
-                    <span class="text-xs lg:text-base font-semibold text-[#285F81]">Remember me</span>
+                    <span class="text-xs lg:text-base font-medium text-[#285F81]">Remember me</span>
                 </div>
             </form>
 

@@ -66,10 +66,10 @@ function openFunction (value) {
             <div class="lg:w-1/3 flex lg:pl-14">
                 <img src="/images/logo/logo.svg" alt="Fashion Fit Logo">
             </div>
-            <nav class="w-2/5">
-                <ul class="hidden lg:flex space-x-16 font-normal text relative z-50">
+            <nav class="w-2/5 hidden lg:block">
+                <ul class="lg:flex space-x-14 font-normal text relative z-50">
                     <li>
-                        <RouterLink  to="/">Home</RouterLink>
+                        <RouterLink to="/">Home</RouterLink>
                     </li>
                     <li>
                         <RouterLink to="/about">About us</RouterLink>
@@ -171,7 +171,7 @@ function openFunction (value) {
             </Transition>
 
             <Transition name="overlay">
-                <div class="bg-black opacity-[15%] fixed inset-x-0 inset-y-0 z-[] transition duration-400 ease" @click="removeOverlay()" v-show="overlay()"></div>
+                <div class="bg-black opacity-[15%] fixed inset-x-0 inset-y-0 z-[30] transition duration-400 ease" @click="removeOverlay()" v-show="overlay()"></div>
             </Transition>
 
             <!-- Collection Menu -->

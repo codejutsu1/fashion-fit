@@ -49,7 +49,7 @@ function togglePassword(inputClass)
                         <input type="submit" value="Sign up" class="w-full bg-[#307098] py-3 text-base font-semibold text-[#FFFFFF] cursor-pointer">
                     </div>
                 </div>
-                <span class="block text-center pt-3 font-semibold text-[#141415] text-sm lg:text-base">By creating an account, you agree to our <a href="#" class="font-medium text-[#307098]">Privacy Policy</a> & <a href="#" class="font-medium text-[#307098]">Terms of use</a></span>
+                <span class="block text-center pt-3 font-medium text-[#141415] text-sm lg:text-base">By creating an account, you agree to our <a href="#" class="font-semibold text-[#307098]">Privacy Policy</a> & <a href="#" class="font-semibold text-[#307098]">Terms of use</a></span>
             </form>
 
             <div class="py-10 text-[#141415] w-4/5 mx-auto space-y-5">
