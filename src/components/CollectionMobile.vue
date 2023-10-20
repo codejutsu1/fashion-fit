@@ -2,9 +2,9 @@
 
 </script>
 <template> 
-    <div class="fixed w-[70%] overflow-y-scroll overflow-x-hidden h-3/5 bg-[#FFFFFF] top-16 border-2 right-5 z-40 pb-8">
+    <div class="fixed w-[70%] overflow-y-scroll overflow-x-hidden h-3/5 bg-[#FFFFFF] top-16 right-5 z-[65] pb-8">
         <div>
-            <div class="flex justify-between py-4 px-6 sticky top-0 w-full  bg-[#FFFFFF]">
+            <div class="flex justify-between py-4 px-6 sticky top-0 w-full bg-[#FFFFFF]">
                 <img @click="$emit('closeMobileCollection')" class="py-2 pr-4" src="/images/icons/back.svg" alt="Back Svg">
                 <img @click="$emit('closeMenu')" class="py-2 pl-4" src="/images/icons/close.svg" alt="Close Svg">
             </div>

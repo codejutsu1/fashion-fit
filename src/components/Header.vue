@@ -42,6 +42,15 @@ function closeMobile() {
     isOpen.value = true
 }
 
+function overlay() {
+    if(mobileCollectionOpen.value === true || isOpen.value === true) return true 
+    else return false
+}
+
+function removeOverlay(){
+    mobileCollectionOpen.value = isOpen.value = false
+}
+
 function openFunction (value) {
     value == 'cart' ? cartOpen.value = true : wishlistOpen.value = true
 
@@ -113,7 +122,7 @@ function openFunction (value) {
             
             <!-- Responsive mobile -->
             <Transition>
-                <div class="fixed lg:hidden w-[70%]  border bg-[#FFFFFF] top-16 right-0 z-40" v-if="isOpen">
+                <div class="fixed lg:hidden w-[70%]  border bg-[#FFFFFF] top-16 right-0 z-40" v-show="isOpen">
                     <!-- <div class="fixed bg-[#D9D9D9] inset-x-0 inset-y-0 overflow-hidden opacity-40"></div> -->
                     <div class="flex justify-between pt-4 pl-4 pr-2">
                         <div class="border flex space-x-3 w-4/5 px-4 res-search-input">
@@ -159,6 +168,10 @@ function openFunction (value) {
                         </div>
                     </div>
                 </div>
+            </Transition>
+
+            <Transition name="overlay">
+                <div class="bg-black opacity-[15%] fixed inset-x-0 inset-y-0 z-[] transition duration-400 ease" @click="removeOverlay()" v-show="overlay()"></div>
             </Transition>
 
             <!-- Collection Menu -->
@@ -278,18 +291,18 @@ function openFunction (value) {
     </header>
 
     <Transition :name="animationValue">
-        <Cart v-if="cartOpen" @closeCart="cartOpen = false" @closeMenu="isOpen = false" />
+        <Cart v-show="cartOpen" @closeCart="cartOpen = false" @closeMenu="isOpen = false" />
     </Transition>
 
     <Transition :name="animationValue">
-        <Wishlist v-if="wishlistOpen" @closeWishlist="wishlistOpen = false" @closeMenu="isOpen = false" />
+        <Wishlist v-show="wishlistOpen" @closeWishlist="wishlistOpen = false" @closeMenu="isOpen = false" />
     </Transition>
 
     <Transition name="search">
-        <Search v-if="searchOpen" @closeSearch="searchOpen = false" />
+        <Search v-show="searchOpen" @closeSearch="searchOpen = false" />
     </Transition>
     <Transition name="collection">
-        <CollectionMobile v-if="mobileCollectionOpen" @closeMobileCollection="closeMobile" @closeMenu="mobileCollectionOpen = false" />
+        <CollectionMobile v-show="mobileCollectionOpen" @closeMobileCollection="closeMobile" @closeMenu="mobileCollectionOpen = false" />
     </Transition>
 </template>
 
