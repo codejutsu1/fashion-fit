@@ -34,7 +34,13 @@ const router = createRouter({
       name: 'signin',
       component: () => import('../views/Signin.vue')
     }
-  ]
+  ],
+
+  scrollBehavior() {
+    return new Promise((resolve) => {
+      resolve({ left: 0, top: 0 })
+    })
+  }
 })
 
 export default router
