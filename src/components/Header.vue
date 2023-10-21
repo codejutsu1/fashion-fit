@@ -122,7 +122,7 @@ function openFunction (value) {
             
             <!-- Responsive mobile -->
             <Transition>
-                <div class="fixed lg:hidden w-[70%]  border bg-[#FFFFFF] top-16 right-0 z-40" v-show="isOpen">
+                <div class="fixed lg:hidden w-[70%]  border bg-[#FFFFFF] top-16 right-0 z-40" v-if="isOpen">
                     <!-- <div class="fixed bg-[#D9D9D9] inset-x-0 inset-y-0 overflow-hidden opacity-40"></div> -->
                     <div class="flex justify-between pt-4 pl-4 pr-2">
                         <div class="border flex space-x-3 w-4/5 px-4 res-search-input">
