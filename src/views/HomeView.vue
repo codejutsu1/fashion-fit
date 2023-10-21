@@ -53,7 +53,7 @@ import NewCollection from '../components/NewCollection.vue'
     <section class="bg-[#FDFBF9] py-14">
       <div class="w-5/6 mx-auto">
         <h1 class="text-2xl lg:text-4xl font-semibold lg:leading-[50px] text-center">Benefits</h1>
-        <p class="text-center text-base lg:text-2xl">Why patronize us?</p>
+        <p class="text-center text-base lg:text-2xl pt-2 lg:pt-4">Why patronize us?</p>
         <div class="grid grid-cols-2 lg:grid-cols-4 justify-between py-10 mx-auto lg:px-10 text-[#141415]">
           <div>
             <div class="flex justify-center">
@@ -110,7 +110,7 @@ import NewCollection from '../components/NewCollection.vue'
     <section class="bg-[#F9F3EE] py-14">
       <div>
         <h1 class="text-2xl lg:text-4xl font-semibold lg:leading-[50px] text-center">Our Blog</h1>
-        <p class="text-center text-base lg:text-2xl">Stay to date about fashion</p>
+        <p class="text-center text-base lg:text-2xl pt-2">Stay to date about fashion</p>
 
         <div class="w-11/12 md:grid grid-cols-3 mx-auto pt-10 gap-8">
           <div>

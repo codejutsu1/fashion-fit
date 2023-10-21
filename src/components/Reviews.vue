@@ -2,7 +2,7 @@
     <section class="py-10 lg:py-14">
       <div class="mx-auto w-5/6 text-[#141415]">
         <h1 class="text-2xl lg:text-4xl font-semibold leading-[50px] text-center">Reviews</h1>
-        <p class="text-center text-base lg:text-2xl">What our clients say about us</p>
+        <p class="text-center text-base lg:text-2xl pt-0 lg:pt-4">What our clients say about us</p>
         <div class="md:grid grid-cols-3 py-10 mx-auto">
           <div>
             <div class="flex justify-center">
