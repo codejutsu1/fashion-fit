@@ -103,7 +103,7 @@ const options = {
             </div>
           </div>
           <div class="flex justify-center py-8">
-            <button class="bg-[#307098] py-3 px-14 mx-auto font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
+            <button class="bg-[#307098] h-[48px] w-[190px] mx-auto font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
               Shop all
             </button>
           </div>

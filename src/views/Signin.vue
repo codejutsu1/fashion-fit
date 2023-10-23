@@ -37,7 +37,7 @@ function togglePassword()
                         </div>
                     </div>
                     <div>
-                        <input type="submit" value="Sign in" class="w-full bg-[#307098] py-3 text-base font-semibold text-[#FFFFFF] cursor-pointer">
+                        <input type="submit" value="Sign in" class="w-full bg-[#307098] h-[48px] flex justify-center items-center text-base font-semibold text-[#FFFFFF] cursor-pointer">
                     </div>
                 </div>
                 <div class="w-11/12 lg:w-4/5 mx-auto pt-4 flex items-center space-x-2">
@@ -49,7 +49,7 @@ function togglePassword()
             <div class="py-10 text-[#141415] w-4/5 mx-auto space-y-5">
                 <h1 class="text-center font-medium text-xl lg:text-2xl">New to Flair?</h1>
                 <div>
-                    <RouterLink to="signup" class="w-full block border border-[#307098] text-center py-3 font-semibold text-[#307098]">
+                    <RouterLink to="signup" class="w-full border border-[#307098] text-center h-[48px] flex items-center justify-center font-semibold text-[#307098]">
                         Create an account
                     </RouterLink>
                 </div>

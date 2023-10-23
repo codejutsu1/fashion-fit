@@ -46,16 +46,16 @@ function togglePassword(inputClass)
                         </div>
                     </div>
                     <div>
-                        <input type="submit" value="Sign up" class="w-full bg-[#307098] py-3 text-base font-semibold text-[#FFFFFF] cursor-pointer">
+                        <input type="submit" value="Sign up" class="w-full bg-[#307098] h-[48px] text-base font-semibold text-[#FFFFFF] cursor-pointer">
                     </div>
                 </div>
-                <span class="block text-center pt-3 font-medium text-[#141415] text-sm lg:text-base">By creating an account, you agree to our <a href="#" class="font-semibold text-[#307098]">Privacy Policy</a> & <a href="#" class="font-semibold text-[#307098]">Terms of use</a></span>
+                <span class="block text-center py-3 font-medium text-[#141415] text-sm lg:text-base">By creating an account, you agree to our  <a href="#" class="font-semibold text-[#307098] inline-block"> Privacy Policy</a> & <a href="#" class="font-semibold text-[#307098]">Terms of use</a></span>
             </form>
 
             <div class="py-10 text-[#141415] w-4/5 mx-auto space-y-5">
                 <h1 class="text-center font-medium text-xl lg:text-2xl">Do you have an account?</h1>
                 <div>
-                    <RouterLink to="signin" class="w-full block border border-[#307098] text-center py-3 font-semibold text-[#307098]">
+                    <RouterLink to="signin" class="w-full border h-[48px] border-[#307098] flex items-center justify-center font-semibold text-[#307098]">
                         Sign in
                     </RouterLink>
                 </div>

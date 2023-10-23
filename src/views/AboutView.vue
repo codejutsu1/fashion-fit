@@ -12,7 +12,7 @@ import Reviews from '../components/Reviews.vue'
           </h1>
           <Transition></Transition>
           <p class="text-[#FFFFFF] text-base lg:text-2xl py-2 right-animation">Get inspired as you read about us</p>
-          <button class="bg-[#307098] py-3 px-14 mt-10 font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373] left-animation">
+          <button class="bg-[#307098] h-[48px] w-[190px] mt-10 font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373] left-animation">
             Shop Now
           </button>
         </div>
@@ -102,7 +102,7 @@ import Reviews from '../components/Reviews.vue'
         <h1 class="lg:text-4xl text-2xl font-semibold leading-[50px]">Newsletter</h1>
         <p class="lg:text-2xl text-base pb-8">Let’s deliver fashion goodness into your inbox</p>
         <input type="email" class="block w-11/12 lg:w-[75%] mx-auto bg-[#FFFFFF] placeholder:text-[#285F81] text-[#285F81] placeholder:text-xs py-5 px-4" placeholder="Enter your email address">
-        <button class="bg-[#307098] py-3 px-14 mt-5 font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
+        <button class="bg-[#307098] h-[48px] w-[190px] mt-5 font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
             Subscribe
         </button>
       </div>

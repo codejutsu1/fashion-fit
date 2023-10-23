@@ -13,7 +13,7 @@ import NewCollection from '../components/NewCollection.vue'
           <p class="text-base lg:text-2xl lg:leading-9 left">Fashion is a way of life. Experience fashion at its best as you shop from our collections </p>
         </div>
         <Transition ></Transition>
-        <button class="bg-[#307098] py-3 px-14 mt-5 lg:mt-10 font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373] right">
+        <button class="bg-[#307098] h-[48px] w-[190px] mt-5 lg:mt-10 font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373] right">
           Shop Now
         </button>
       </div>
@@ -37,7 +37,7 @@ import NewCollection from '../components/NewCollection.vue'
             <h1 class="text-2xl lg:text-4xl font-semibold lg:leading-[50px] text-outfit">Outfit for every occassion</h1>
             <p class="text-base pt-2 lg:text-2xl">Explore outfits that are perfect for your next beach outing</p>
             <div class="flex justify-center pt-5">
-              <button class="bg-[#307098] py-3 px-14 mx-auto font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
+              <button class="bg-[#307098] h-[48px] w-[190px] mx-auto font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
                 Shop now
               </button>
             </div>
@@ -157,7 +157,7 @@ import NewCollection from '../components/NewCollection.vue'
         </div>
 
         <div class="flex justify-center py-2">
-          <button class="bg-[#307098] py-3 px-14 mx-auto font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
+          <button class="bg-[#307098] h-[48px] w-[190px] mx-auto font-semibold leading-5 text-[#FFFFFF] hover:bg-[#215373]">
             More blogs
           </button>
         </div>
