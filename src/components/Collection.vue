@@ -18,6 +18,7 @@ const options = {
     }
 }
  
+const wishlist_red = ref(false)
 const img = ref([])
 const imageloop = ref()
 const images = ref([
@@ -80,6 +81,13 @@ function leaveImage(pos)
   clearTimeout(imageloop.value)
   document.getElementById('img-hover'+ (pos+1)).src = images.value[pos][images.value[pos].length - 1]
 }
+
+function wishlist(num) {
+  wishlist_red.value = !wishlist_red.value
+  
+  if(wishlist_red.value == true) document.getElementById('wishlist'+ (num)).src = '/images/icons/wish-red.svg'
+  else document.getElementById('wishlist'+ (num)).src = '/images/icons/wish.svg'
+}
 </script>
 <template>
     <section class="best-sellers py-14 splide splide1">
@@ -92,8 +100,8 @@ function leaveImage(pos)
             <div class="overflow-x-hidden best-seller-grid splide__slide">
               <div class="relative h-4/5" @mouseenter="hoverImages(0)" @mouseleave="leaveImage(0)">
                 <img class="w-full h-full object-fit cursor-pointer" id="img-hover1" :src="images[0][1]" alt="Corset Midi Dress">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish-red.svg" alt="Wish Icon">
+                <div @click="wishlist(1)" class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center cursor-pointer">
+                  <img id="wishlist1" class="wishlist" src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full h-1/5 bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -113,8 +121,8 @@ function leaveImage(pos)
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
               <div class="relative h-4/5" @mouseenter="hoverImages(1)" @mouseleave="leaveImage(1)">
                 <img class="w-full h-full object-fit cursor-pointer" id="img-hover2" :src="images[1][1]" alt="Textured Shorts">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(2)"  class="absolute cursor-pointer w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
+                  <img id="wishlist2" src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full h-1/5 bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -135,7 +143,7 @@ function leaveImage(pos)
               <div class="relative h-4/5" @mouseenter="hoverImages(2)" @mouseleave="leaveImage(2)">
                 <img class="w-full h-full object-fit cursor-pointer" id="img-hover3" :src="images[2][1]" alt="White Sneakers">
                 <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img class="wishlist" src="/images/icons/wish.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full h-1/5 bg-[#FDFBF9] py-3 text-center text-[#141415]">
