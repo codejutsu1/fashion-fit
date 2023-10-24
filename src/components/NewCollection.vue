@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 
 const options = {
   type: 'slide',
@@ -15,6 +16,20 @@ const options = {
   }
 }
 
+const wishlist_red = ref([])
+
+function wishlist(num) {
+  wishlist_red.value[num] = !wishlist_red.value[num]
+
+  if(wishlist_red.value[num]) {
+    document.getElementById('wishlist'+num).classList.remove('wishlist_fadeOut')
+    document.getElementById('wishlist'+num).classList.add('wishlist_fadeIn')
+  }else {
+    document.getElementById('wishlist'+num).classList.remove('wishlist_fadeIn')
+    document.getElementById('wishlist'+num).classList.add('wishlist_fadeOut')
+  }
+}
+
 </script>
 <template>
     <section class="bg-[#F9F3EE] py-12">
@@ -27,8 +42,9 @@ const options = {
             <div class="w-full overflow-x-hidden splide__slide border border-[#CAD7DF]">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-1.jpg" alt="Jean Jacket">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(0)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img id="wishlist0" class="grid-area wishlist_fadeOut" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -40,8 +56,9 @@ const options = {
             <div class="overflow-x-hidden splide__slide border border-[#CAD7DF]">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-2.jpg" alt="Jean Jacket">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(1)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img id="wishlist1" class="grid-area wishlist_fadeOut" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -53,8 +70,9 @@ const options = {
             <div class="w-full overflow-hidden splide__slide border border-[#CAD7DF]">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-3.jpg" alt="Jean Jacket">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(2)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img id="wishlist2" class="grid-area wishlist_fadeOut" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -66,8 +84,9 @@ const options = {
             <div class="w-full overflow-hidden splide__slide border border-[#CAD7DF]">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-4.jpg" alt="Jean Jacket">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(3)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img id="wishlist3" class="grid-area wishlist_fadeOut" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -79,8 +98,9 @@ const options = {
             <div class="w-full overflow-hidden splide__slide border border-[#CAD7DF]">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-5.jpg" alt="Jean Jacket">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(4)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img id="wishlist4" class="grid-area wishlist_fadeOut" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -92,8 +112,9 @@ const options = {
             <div class="w-full overflow-hidden splide__slide border border-[#CAD7DF]">
               <div class="relative">
                 <img class="w-full h-full object-fit" src="/images/collection/collection-6.jpg" alt="Jean Jacket">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(5)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img id="wishlist5" class="grid-area wishlist_fadeOut" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="bg-[#FDFBF9] py-3 text-center text-[#141415]">
