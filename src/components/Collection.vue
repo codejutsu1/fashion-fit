@@ -18,7 +18,7 @@ const options = {
     }
 }
  
-const wishlist_red = ref(false)
+const wishlist_red = ref([])
 const img = ref([])
 const imageloop = ref()
 const images = ref([
@@ -83,10 +83,7 @@ function leaveImage(pos)
 }
 
 function wishlist(num) {
-  wishlist_red.value = !wishlist_red.value
-  
-  if(wishlist_red.value == true) document.getElementById('wishlist'+ (num)).src = '/images/icons/wish-red.svg'
-  else document.getElementById('wishlist'+ (num)).src = '/images/icons/wish.svg'
+  wishlist_red.value[num] = !wishlist_red.value[num]
 }
 </script>
 <template>
@@ -100,8 +97,9 @@ function wishlist(num) {
             <div class="overflow-x-hidden best-seller-grid splide__slide">
               <div class="relative h-4/5" @mouseenter="hoverImages(0)" @mouseleave="leaveImage(0)">
                 <img class="w-full h-full object-fit cursor-pointer" id="img-hover1" :src="images[0][1]" alt="Corset Midi Dress">
-                <div @click="wishlist(1)" class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center cursor-pointer">
-                  <img id="wishlist1" class="wishlist" src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(0)" class="grid absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center cursor-pointer">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img class="grid-area" :class="{'wishlist_fadeOut': !wishlist_red[0], 'wishlist_fadeIn': wishlist_red[0]}" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full h-1/5 bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -121,8 +119,9 @@ function wishlist(num) {
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
               <div class="relative h-4/5" @mouseenter="hoverImages(1)" @mouseleave="leaveImage(1)">
                 <img class="w-full h-full object-fit cursor-pointer" id="img-hover2" :src="images[1][1]" alt="Textured Shorts">
-                <div @click="wishlist(2)"  class="absolute cursor-pointer w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img id="wishlist2" src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(1)"  class="grid absolute cursor-pointer w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img class="grid-area" :class="{'wishlist_fadeOut': !wishlist_red[1], 'wishlist_fadeIn': wishlist_red[1]}" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full h-1/5 bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -142,8 +141,9 @@ function wishlist(num) {
             <div class="w-full overflow-hidden best-seller-grid  splide__slide">
               <div class="relative h-4/5" @mouseenter="hoverImages(2)" @mouseleave="leaveImage(2)">
                 <img class="w-full h-full object-fit cursor-pointer" id="img-hover3" :src="images[2][1]" alt="White Sneakers">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img class="wishlist" src="/images/icons/wish.svg" alt="Wish Icon">
+                <div  @click="wishlist(2)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area"  src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img class="grid-area" :class="{'wishlist_fadeOut': !wishlist_red[2], 'wishlist_fadeIn': wishlist_red[2]}" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full h-1/5 bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -163,8 +163,9 @@ function wishlist(num) {
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
               <div class="relative h-4/5" @mouseenter="hoverImages(3)" @mouseleave="leaveImage(3)">
                 <img class="w-full h-full object-fit cursor-pointer" id="img-hover4" :src="images[3][2]" alt="Drawstring Top">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(3)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img class="grid-area" :class="{'wishlist_fadeOut': !wishlist_red[3], 'wishlist_fadeIn': wishlist_red[3]}" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full h-1/5 bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -184,8 +185,9 @@ function wishlist(num) {
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
               <div class="relative h-4/5" @mouseenter="hoverImages(4)" @mouseleave="leaveImage(4)">
                 <img class="w-full h-full object-fit cursor-pointer" id="img-hover5" :src="images[4][1]" alt="Rhinestone Choker">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(4)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img class="grid-area" :class="{'wishlist_fadeOut': !wishlist_red[4], 'wishlist_fadeIn': wishlist_red[4]}" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full h-1/5 bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -205,8 +207,9 @@ function wishlist(num) {
             <div class="w-full overflow-hidden best-seller-grid splide__slide h-[580px]">
               <div class="relative h-4/5" @mouseenter="hoverImages(5)" @mouseleave="leaveImage(5)">
                 <img class="w-full h-full object-fit cursor-pointer" id="img-hover6" :src="images[5][1]" alt="Flare Skirt">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(5)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img class="grid-area" :class="{'wishlist_fadeOut': !wishlist_red[5], 'wishlist_fadeIn': wishlist_red[5]}" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full h-1/5 bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -226,8 +229,9 @@ function wishlist(num) {
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
               <div class="relative h-4/5" @mouseenter="hoverImages(6)" @mouseleave="leaveImage(6)">
                 <img class="w-full h-full object-fit cursor-pointer" id="img-hover7" :src="images[6][1]" alt="Cut out Top">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(6)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img class="grid-area" :class="{'wishlist_fadeOut': !wishlist_red[6], 'wishlist_fadeIn': wishlist_red[6]}" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full h-1/5 bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -247,8 +251,9 @@ function wishlist(num) {
             <div class="w-full overflow-hidden best-seller-grid splide__slide">
               <div class="relative h-4/5" @mouseenter="hoverImages(7)" @mouseleave="leaveImage(7)">
                 <img class="w-full h-full object-fit cursor-pointer" id="img-hover8" :src="images[7][1]" alt="Kicks">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(7)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img class="grid-area" :class="{'wishlist_fadeOut': !wishlist_red[7], 'wishlist_fadeIn': wishlist_red[7]}" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full h-1/5 bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -265,11 +270,12 @@ function wishlist(num) {
               </div>
             </div>
 
-            <div class="w-full overflow-hidden best-seller-grid splide__slide">
+            <div class="w-full overflow-hidden best-seller-grid splide__slide h-[580px]">
               <div class="relative h-4/5" @mouseenter="hoverImages(8)" @mouseleave="leaveImage(8)">
                 <img class="w-full h-full object-fit cursor-pointer" id="img-hover9" :src="images[8][1]" alt="Kicks">
-                <div class="absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 flex items-center justify-center">
-                  <img src="/images/icons/wish.svg" alt="Wish Icon">
+                <div @click="wishlist(8)" class="grid cursor-pointer absolute w-11 h-11 rounded-full wish-icon bottom-5 right-7 items-center justify-center">
+                  <img class="grid-area" src="/images/icons/wish.svg" alt="Wish Icon">
+                  <img class="grid-area" :class="{'wishlist_fadeOut': !wishlist_red[8], 'wishlist_fadeIn': wishlist_red[8]}" src="/images/icons/wish-red.svg" alt="Wish Icon">
                 </div>
               </div>
               <div class="w-full h-1/5 bg-[#FDFBF9] py-3 text-center text-[#141415]">
@@ -290,3 +296,20 @@ function wishlist(num) {
       </Splide>
     </section>
 </template>
+
+<style>
+.wishlist_fadeIn {
+  transition: opacity 500ms;
+  opacity: 1;
+}
+
+.wishlist_fadeOut {
+  transition: opacity 500ms;
+  opacity: 0;
+}
+
+.grid-area {
+  grid-area: 1/-1;
+}
+
+</style>
