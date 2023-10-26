@@ -121,9 +121,8 @@ function openFunction (value) {
             </div>
             
             <!-- Responsive mobile -->
-            <Transition>
-                <div class="fixed lg:hidden w-[70%]  border bg-[#FFFFFF] top-16 right-0 z-40" v-if="isOpen">
-                    <!-- <div class="fixed bg-[#D9D9D9] inset-x-0 inset-y-0 overflow-hidden opacity-40"></div> -->
+            <Transition name="menu">
+                <div class="fixed lg:hidden w-[70%]  border-4 bg-[#FFFFFF] top-16 right-0 z-40" v-if="isOpen">
                     <div class="flex justify-between pt-4 pl-4 pr-2">
                         <div class="border flex space-x-3 w-4/5 px-4 res-search-input">
                             <img class="w-4" src="/images/icons/search-black.svg" alt="Search Icon">
@@ -171,7 +170,7 @@ function openFunction (value) {
             </Transition>
 
             <Transition name="overlay">
-                <div class="bg-black opacity-[15%] fixed inset-x-0 inset-y-0 z-[30] transition duration-400 ease" @click="removeOverlay()" v-show="overlay()"></div>
+                <div class="bg-black opacity-[15%] fixed inset-x-0 inset-y-0 z-[30]" @click="removeOverlay()" v-if="overlay()"></div>
             </Transition>
 
             <!-- Collection Menu -->
@@ -301,6 +300,7 @@ function openFunction (value) {
     <Transition name="search">
         <Search v-show="searchOpen" @closeSearch="searchOpen = false" />
     </Transition>
+
     <Transition name="collection">
         <CollectionMobile v-show="mobileCollectionOpen" @closeMobileCollection="closeMobile" @closeMenu="mobileCollectionOpen = false" />
     </Transition>
@@ -320,7 +320,7 @@ function openFunction (value) {
     border-color: #0000 #0000 #215373 #0000;
 }
 
- .v-enter-active {
+ .menu-enter-active {
     animation: slideIn 1s;
   }
 
@@ -335,7 +335,7 @@ function openFunction (value) {
         translate: 0 0;
     }
   }
-  .v-leave-active {
+  .menu-leave-active {
     animation: slideOut 0.5s;
   }
   @keyframes slideOut {
