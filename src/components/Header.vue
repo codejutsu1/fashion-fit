@@ -122,7 +122,7 @@ function openFunction (value) {
             
             <!-- Responsive mobile -->
             <Transition name="menu">
-                <div class="fixed lg:hidden w-[70%]  border-4 bg-[#FFFFFF] top-16 right-0 z-40" v-if="isOpen">
+                <div class="fixed lg:hidden w-[70%] bg-[#FFFFFF] top-16 right-0 z-40" v-if="isOpen">
                     <div class="flex justify-between pt-4 pl-4 pr-2">
                         <div class="border flex space-x-3 w-4/5 px-4 res-search-input">
                             <img class="w-4" src="/images/icons/search-black.svg" alt="Search Icon">
