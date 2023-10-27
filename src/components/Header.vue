@@ -43,12 +43,12 @@ function closeMobile() {
 }
 
 function overlay() {
-    if(mobileCollectionOpen.value === true || isOpen.value === true) return true 
+    if(mobileCollectionOpen.value || isOpen.value || cartOpen.value || wishlistOpen.value) return true 
     else return false
 }
 
 function removeOverlay(){
-    mobileCollectionOpen.value = isOpen.value = false
+    mobileCollectionOpen.value = isOpen.value = cartOpen.value = wishlistOpen.value = false
 }
 
 function openFunction (value) {
@@ -170,7 +170,7 @@ function openFunction (value) {
             </Transition>
 
             <Transition name="overlay">
-                <div class="bg-black opacity-[15%] fixed inset-x-0 inset-y-0 z-[30]" @click="removeOverlay()" v-if="overlay()"></div>
+                <div class="bg-black  opacity-[15%] fixed inset-x-0 inset-y-0 z-[30]" @click="removeOverlay()" v-if="overlay()"></div>
             </Transition>
 
             <!-- Collection Menu -->
@@ -304,9 +304,23 @@ function openFunction (value) {
     <Transition name="collection">
         <CollectionMobile v-show="mobileCollectionOpen" @closeMobileCollection="closeMobile" @closeMenu="mobileCollectionOpen = false" />
     </Transition>
+
+    <Transition name="overlay">
+        <div class="bg-black hidden lg:block opacity-[15%] fixed inset-x-0 inset-y-0 z-[60]" @click="removeOverlay" v-show="overlay()"></div>
+    </Transition>
 </template>
 
 <style scoped>
+/* for the overlay animation */
+.overlay-enter-active{
+    transition: opacity 1s;
+    opacity: 15%;
+}
+
+.overlay-leave-active{
+    transition: opacity 500ms;
+    opacity: 0;
+}
 .header-shadow{
     box-shadow: 0px 2px 12px 0px #1414150F;
 }
